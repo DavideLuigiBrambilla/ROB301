@@ -1,0 +1,26 @@
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** Command: kcg66.exe -config C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Coverage/config.txt
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+#ifndef _KCG_IMPORTED_TYPES_H_
+#define _KCG_IMPORTED_TYPES_H_
+
+#include "./user_macros.h"
+
+#ifndef kcg_assign
+#include "kcg_assign.h"
+#endif /* kcg_assign */
+
+/* The definition of this type must be provided */
+typedef void Result_MTC;
+
+extern void Result_MTC_init(Result_MTC *kcg_c1);
+
+#define kcg_lit_Result_MTC(kcg_C1) ((Result_MTC) (kcg_C1))
+
+#endif /* _KCG_IMPORTED_TYPES_H_ */
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** kcg_imported_types.dh
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+

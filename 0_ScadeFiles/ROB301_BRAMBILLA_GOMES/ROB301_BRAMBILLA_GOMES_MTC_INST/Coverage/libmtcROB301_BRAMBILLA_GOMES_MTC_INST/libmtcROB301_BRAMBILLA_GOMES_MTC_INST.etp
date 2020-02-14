@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project id="1" oid_count="15" defaultConfiguration="2">
+	<props>
+		<Prop id="3" name="@SCADE:SAVEVERSION">
+			<value>SCADE65</value>
+		</Prop>
+		<Prop id="6" name="@SCADE:NOTEFILE">
+			<value>$(SCADE)/lib/mtc.aty</value>
+		</Prop>
+		<Prop id="7" name="@STUDIO:PRODUCT">
+			<value>SC</value>
+		</Prop>
+	</props>
+	<roots>
+		<Folder id="4" extensions="scade;xscade" name="Model Files">
+			<elements>
+				<Folder id="8" extensions="scade;xscade" name="Separate Files">
+					<elements>
+						<FileRef id="10" persistAs="MTC_Instrumenters.xscade">
+							<props>
+								<Prop id="11" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="12" persistAs="MTC_Observers.xscade">
+							<props>
+								<Prop id="13" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+					</elements>
+				</Folder>
+				<FileRef id="9" persistAs="MTCEx.xscade"/>
+			</elements>
+		</Folder>
+		<Folder id="5" extensions="scade;xscade" name="SCADE Libraries"/>
+		<Folder id="15" extensions="cdf" name="MTC Files">
+			<elements>
+				<FileRef id="14" persistAs="libmtcROB301_BRAMBILLA_GOMES_MTC_INST.cdf"/>
+			</elements>
+		</Folder>
+	</roots>
+	<configurations>
+		<Configuration id="2" name="Default"/>
+	</configurations>
+</Project>

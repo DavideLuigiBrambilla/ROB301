@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmath/math.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmath/vect.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Computing_Model.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Doors_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Double_Check_Computing_Model.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Gears_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Generic_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Health_Monitor.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sensor_Validity.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub1_Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub1_Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub2_Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub2_Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub_Doors_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub_Gears_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Total_Model.xscade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="debug" value="#off#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Coverage"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="Computing_Model"/>
+    <Option name="auth" value="#off#"/>
+    <RootNode headerFile="Computing_Model.h" scadeName="Computing_Model" targetCycleFct="Computing_Model" targetInitFct="Computing_Model_reset" targetInitializationFct="Computing_Model_init">
+      <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="handle" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_front" scadeType="bool" targetName="gear_Extended_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_right" scadeType="bool" targetName="gear_Extended_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_left" scadeType="bool" targetName="gear_Extended_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_front" scadeType="bool" targetName="gear_Retracted_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_right" scadeType="bool" targetName="gear_Retracted_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_left" scadeType="bool" targetName="gear_Retracted_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_front" scadeType="bool" targetName="gear_Shock_Absorber_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_right" scadeType="bool" targetName="gear_Shock_Absorber_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_left" scadeType="bool" targetName="gear_Shock_Absorber_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_front" scadeType="bool" targetName="door_Closed_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_right" scadeType="bool" targetName="door_Closed_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_left" scadeType="bool" targetName="door_Closed_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_front" scadeType="bool" targetName="door_Open_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_right" scadeType="bool" targetName="door_Open_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_left" scadeType="bool" targetName="door_Open_left" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="general_EV" scadeType="bool" targetName="general_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="close_EV" scadeType="bool" targetName="close_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="open_EV" scadeType="bool" targetName="open_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="retract_EV" scadeType="bool" targetName="retract_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="extend_EV" scadeType="bool" targetName="extend_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Locked_Down" scadeType="bool" targetName="gears_Locked_Down" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Maneuvring" scadeType="bool" targetName="gears_Maneuvring" targetType="kcg_bool"/>
+      <Automaton scadeName="State_Machine_Extend_Gear" targetStatesType="SSM_ST_State_Machine_Extend_Gear" targetTransitionsType="SSM_TR_State_Machine_Extend_Gear">
+        <State scadeName="RETRACTED_UP" targetName="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="GEN_EV_ON" targetName="SSM_TR_RETRACTED_UP_GEN_EV_ON_1_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GEN_EV_ON" targetName="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="22">
+                <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_22_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_GEN_EV_ON_OPEN_EV_ON_1_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON" targetName="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_OPEN_EV_ON_WAITING_TO_UP_1_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTEND_EV_ON" targetName="SSM_TR_OPEN_EV_ON_EXTEND_EV_ON_2_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_ON" targetName="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_EXTEND_EV_ON_WAITING_TO_UP_1_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTEND_EV_OFF" targetName="SSM_TR_EXTEND_EV_ON_EXTEND_EV_OFF_2_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_OFF" targetName="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_EXTEND_EV_OFF_INTERRUPTION_TO_UP_1_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF" targetName="SSM_TR_EXTEND_EV_OFF_OPEN_EV_OFF_2_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON" targetName="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_CLOSE_EV_ON_WAITING_TO_UP_1_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF" targetName="SSM_TR_CLOSE_EV_ON_CLOSE_EV_OFF_2_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF" targetName="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_CLOSE_EV_OFF_INTERRUPTION_TO_UP_1_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="23">
+                <Init inCtx="true" targetName="init1" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_23_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF" targetName="SSM_TR_CLOSE_EV_OFF_GENERAL_EV_OFF_2_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF" targetName="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_OPEN_EV_OFF_INTERRUPTION_TO_UP_1_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="21">
+                <Init inCtx="true" targetName="init2" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_21_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON" targetName="SSM_TR_OPEN_EV_OFF_CLOSE_EV_ON_2_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF" targetName="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTENDED_DOWN" targetName="SSM_TR_GENERAL_EV_OFF_EXTENDED_DOWN_1_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTENDED_DOWN" targetName="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="GENERAL_EV_ON" targetName="SSM_TR_EXTENDED_DOWN_GENERAL_EV_ON_1_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_ON" targetName="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="19">
+                <Init inCtx="true" targetName="init3" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_19_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_GENERAL_EV_ON_OPEN_EV_ON1_1_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF1" targetName="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_OPEN_EV_OFF1_INTERRUPTION_DOWN_1_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="20">
+                <Init inCtx="true" targetName="init4" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_20_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON1" targetName="SSM_TR_OPEN_EV_OFF1_CLOSE_EV_ON1_2_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF1" targetName="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_CLOSE_EV_OFF1_INTERRUPTION_DOWN_1_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="24">
+                <Init inCtx="true" targetName="init5" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_24_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF1" targetName="SSM_TR_CLOSE_EV_OFF1_GENERAL_EV_OFF1_2_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON1" targetName="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_OPEN_EV_ON1_WAITING_DOWN_1_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="RETRACT_EV_ON" targetName="SSM_TR_OPEN_EV_ON1_RETRACT_EV_ON_1_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_OPEN_EV_ON1_OPEN_EV_OFF1_2_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON1" targetName="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_CLOSE_EV_ON1_WAITING_DOWN_1_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF1" targetName="SSM_TR_CLOSE_EV_ON1_CLOSE_EV_OFF1_2_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRACT_EV_ON" targetName="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_RETRACT_EV_ON_WAITING_DOWN_1_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="RETRAIT_EV_OFF" targetName="SSM_TR_RETRACT_EV_ON_RETRAIT_EV_OFF_2_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRAIT_EV_OFF" targetName="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_RETRAIT_EV_OFF_INTERRUPTION_DOWN_1_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_RETRAIT_EV_OFF_OPEN_EV_OFF1_2_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF1" targetName="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="RETRACTED_UP" targetName="SSM_TR_GENERAL_EV_OFF1_RETRACTED_UP_1_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_TO_UP" targetName="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_INTERRUPTION_TO_UP_OPEN_EV_ON1_1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_DOWN" targetName="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_INTERRUPTION_DOWN_OPEN_EV_ON_1_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_TO_UP" targetName="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="25">
+                <Init inCtx="true" targetName="init6" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_25_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_WAITING_TO_UP_INTERRUPTION_TO_UP_1_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_DOWN" targetName="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="26">
+                <Init inCtx="true" targetName="init7" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_26_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_WAITING_DOWN_INTERRUPTION_DOWN_1_WAITING_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <NextState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_state_nxt"/>
+        <ResetActiveState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_reset_act"/>
+      </Automaton>
+      <Memory inCtx="true" targetName="v3_times_26_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_25_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_24_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_20_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_19_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_21_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_23_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_22_size" targetType="kcg_size"/>
+      <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init1" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init2" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init3" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init4" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init5" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init6" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init7" targetType="kcg_bool"/>
+      <OutCtxType targetName="outC_Computing_Model"/>
+      <InCtxType targetName="inC_Computing_Model"/>
+    </RootNode>
+    <Package scadeName="digital"/>
+    <Package scadeName="truthtables">
+      <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+        <EnumVal scadeName="T" targetName="T_truthtables"/>
+        <EnumVal scadeName="F" targetName="F_truthtables"/>
+        <EnumVal scadeName="X" targetName="X_truthtables"/>
+      </EnumType>
+    </Package>
+    <Package scadeName="linear"/>
+    <Package scadeName="filters"/>
+    <Package scadeName="vect"/>
+    <Package scadeName="math"/>
+    <Package scadeName="mathext">
+      <Package scadeName="mathextimpl"/>
+    </Package>
+    <Package scadeName="pwlinear"/>
+    <Package scadeName="lut"/>
+    <Package scadeName="verif"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

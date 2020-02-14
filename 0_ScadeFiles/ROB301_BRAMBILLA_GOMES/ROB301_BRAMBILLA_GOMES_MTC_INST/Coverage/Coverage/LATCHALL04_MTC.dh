@@ -1,0 +1,45 @@
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** Command: kcg66.exe -config C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Coverage/config.txt
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+#ifndef _LATCHALL04_MTC_H_
+#define _LATCHALL04_MTC_H_
+
+#include "kcg_types.h"
+
+/* =====================  no input structure  ====================== */
+
+/* =====================  no output structure  ====================== */
+
+/* ========================  context type  ========================= */
+typedef struct {
+  /* ---------------------------  outputs  --------------------------- */
+  Result_MTC /* Output1/ */ Output1;
+  /* -------------  insert eventual inits and memories  -------------- */
+} outC_LATCHALL04_MTC;
+
+/* ===========  node initialization and cycle functions  =========== */
+/* MTC::LATCHALL04/ */
+extern void LATCHALL04_MTC(
+  /* Input1/ */
+  kcg_bool Input1,
+  /* Input2/ */
+  kcg_bool Input2,
+  /* Input3/ */
+  kcg_bool Input3,
+  /* Input4/ */
+  kcg_bool Input4,
+  outC_LATCHALL04_MTC *outC);
+
+extern void LATCHALL04_MTC_reset(outC_LATCHALL04_MTC *outC);
+
+extern void LATCHALL04_MTC_init(outC_LATCHALL04_MTC *outC);
+
+
+
+#endif /* _LATCHALL04_MTC_H_ */
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** LATCHALL04_MTC.dh
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** Command: kcg66.exe -config C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Coverage/config.txt
+** Generation date: 2020-02-07T16:30:49
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmath/math.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmath/vect.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Analogical_Switch_Monitoring.xscade"/>
+    <option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Computing_Model.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Doors_Motion_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Double_Check_Computing_Model.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Gears_Motion_Monitoring.xscade"/>
+    <option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Generic_Monitoring.xscade"/>
+    <option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Health_Monitor.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Pression_Sensor_Monitoring.xscade"/>
+    <option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sensor_Validity.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub1_Analogical_Switch_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub1_Pression_Sensor_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub2_Analogical_Switch_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub2_Pression_Sensor_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub_Doors_Motion_Monitoring.xscade"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Sub_Gears_Motion_Monitoring.xscade"/>
+    <option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Total_Model.xscade"/>
+    <option name="probes" value="#on#"/>
+    <option name="debug" value="#off#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="expall" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="target_dir" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Coverage"/>
+    <option name="target" value="C"/>
+    <option name="root" value="Computing_Model"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <predefType id="1" name="bool"/>
+    <predefType id="2" name="char"/>
+    <predefType id="3" name="int8"/>
+    <predefType id="4" name="int16"/>
+    <predefType id="5" name="int32"/>
+    <predefType id="6" name="int64"/>
+    <predefType id="7" name="uint8"/>
+    <predefType id="8" name="uint16"/>
+    <predefType id="9" name="uint32"/>
+    <predefType id="10" name="uint64"/>
+    <predefType id="11" name="float32"/>
+    <predefType id="12" name="float64"/>
+    <predefType id="13" name="size"/>
+    <operator id="14" name="Computing_Model" imported="false" root="true" expanded="false">
+      <input id="15" name="handle" clock="false" type="1"/>
+      <input id="16" name="gear_Extended_front" clock="false" type="1"/>
+      <input id="17" name="gear_Extended_right" clock="false" type="1"/>
+      <input id="18" name="gear_Extended_left" clock="false" type="1"/>
+      <input id="19" name="gear_Retracted_front" clock="false" type="1"/>
+      <input id="20" name="gear_Retracted_right" clock="false" type="1"/>
+      <input id="21" name="gear_Retracted_left" clock="false" type="1"/>
+      <input id="22" name="gear_Shock_Absorber_front" clock="false" type="1"/>
+      <input id="23" name="gear_Shock_Absorber_right" clock="false" type="1"/>
+      <input id="24" name="gear_Shock_Absorber_left" clock="false" type="1"/>
+      <input id="25" name="door_Closed_front" clock="false" type="1"/>
+      <input id="26" name="door_Closed_right" clock="false" type="1"/>
+      <input id="27" name="door_Closed_left" clock="false" type="1"/>
+      <input id="28" name="door_Open_front" clock="false" type="1"/>
+      <input id="29" name="door_Open_right" clock="false" type="1"/>
+      <input id="30" name="door_Open_left" clock="false" type="1"/>
+      <output id="31" name="general_EV" clock="false" type="1"/>
+      <output id="32" name="close_EV" clock="false" type="1"/>
+      <output id="33" name="open_EV" clock="false" type="1"/>
+      <output id="34" name="retract_EV" clock="false" type="1"/>
+      <output id="35" name="extend_EV" clock="false" type="1"/>
+      <output id="36" name="gears_Locked_Down" clock="false" type="1"/>
+      <output id="37" name="gears_Maneuvring" clock="false" type="1"/>
+      <automaton id="38" name="State_Machine_Extend_Gear">
+        <state id="39" name="RETRACTED_UP" initial="true" final="false" default="false">
+          <fork id="40" name="1" kind="strong">
+            <transition id="41" dest="42"/>
+          </fork>
+        </state>
+        <state id="42" name="GEN_EV_ON" initial="false" final="false" default="false">
+          <fork id="43" name="1" kind="strong">
+            <times id="44" name="22"/>
+            <transition id="45" dest="46"/>
+          </fork>
+        </state>
+        <state id="46" name="OPEN_EV_ON" initial="false" final="false" default="false">
+          <fork id="47" name="1" kind="strong">
+            <transition id="48" dest="132"/>
+          </fork>
+          <fork id="49" name="2" kind="strong">
+            <transition id="50" dest="51"/>
+          </fork>
+        </state>
+        <state id="51" name="EXTEND_EV_ON" initial="false" final="false" default="false">
+          <fork id="52" name="1" kind="strong">
+            <transition id="53" dest="132"/>
+          </fork>
+          <fork id="54" name="2" kind="strong">
+            <transition id="55" dest="56"/>
+          </fork>
+        </state>
+        <state id="56" name="EXTEND_EV_OFF" initial="false" final="false" default="false">
+          <fork id="57" name="1" kind="strong">
+            <transition id="58" dest="126"/>
+          </fork>
+          <fork id="59" name="2" kind="strong">
+            <transition id="60" dest="72"/>
+          </fork>
+        </state>
+        <state id="61" name="CLOSE_EV_ON" initial="false" final="false" default="false">
+          <fork id="62" name="1" kind="strong">
+            <transition id="63" dest="132"/>
+          </fork>
+          <fork id="64" name="2" kind="strong">
+            <transition id="65" dest="66"/>
+          </fork>
+        </state>
+        <state id="66" name="CLOSE_EV_OFF" initial="false" final="false" default="false">
+          <fork id="67" name="1" kind="strong">
+            <transition id="68" dest="126"/>
+          </fork>
+          <fork id="69" name="2" kind="strong">
+            <times id="70" name="23"/>
+            <transition id="71" dest="78"/>
+          </fork>
+        </state>
+        <state id="72" name="OPEN_EV_OFF" initial="false" final="false" default="false">
+          <fork id="73" name="1" kind="strong">
+            <transition id="74" dest="126"/>
+          </fork>
+          <fork id="75" name="2" kind="strong">
+            <times id="76" name="21"/>
+            <transition id="77" dest="61"/>
+          </fork>
+        </state>
+        <state id="78" name="GENERAL_EV_OFF" initial="false" final="false" default="false">
+          <fork id="79" name="1" kind="strong">
+            <transition id="80" dest="81"/>
+          </fork>
+        </state>
+        <state id="81" name="EXTENDED_DOWN" initial="false" final="false" default="false">
+          <fork id="82" name="1" kind="strong">
+            <transition id="83" dest="84"/>
+          </fork>
+        </state>
+        <state id="84" name="GENERAL_EV_ON" initial="false" final="false" default="false">
+          <fork id="85" name="1" kind="strong">
+            <times id="86" name="19"/>
+            <transition id="87" dest="100"/>
+          </fork>
+        </state>
+        <state id="88" name="OPEN_EV_OFF1" initial="false" final="false" default="false">
+          <fork id="89" name="1" kind="strong">
+            <transition id="90" dest="129"/>
+          </fork>
+          <fork id="91" name="2" kind="strong">
+            <times id="92" name="20"/>
+            <transition id="93" dest="108"/>
+          </fork>
+        </state>
+        <state id="94" name="CLOSE_EV_OFF1" initial="false" final="false" default="false">
+          <fork id="95" name="1" kind="strong">
+            <transition id="96" dest="129"/>
+          </fork>
+          <fork id="97" name="2" kind="strong">
+            <times id="98" name="24"/>
+            <transition id="99" dest="123"/>
+          </fork>
+        </state>
+        <state id="100" name="OPEN_EV_ON1" initial="false" final="false" default="false">
+          <fork id="101" name="1" kind="strong">
+            <transition id="102" dest="136"/>
+          </fork>
+          <fork id="103" name="2" kind="strong">
+            <fork id="104" name="1" kind="strong">
+              <transition id="105" dest="113"/>
+            </fork>
+            <fork id="106" name="2" kind="strong">
+              <transition id="107" dest="88"/>
+            </fork>
+          </fork>
+        </state>
+        <state id="108" name="CLOSE_EV_ON1" initial="false" final="false" default="false">
+          <fork id="109" name="1" kind="strong">
+            <transition id="110" dest="136"/>
+          </fork>
+          <fork id="111" name="2" kind="strong">
+            <transition id="112" dest="94"/>
+          </fork>
+        </state>
+        <state id="113" name="RETRACT_EV_ON" initial="false" final="false" default="false">
+          <fork id="114" name="1" kind="strong">
+            <transition id="115" dest="136"/>
+          </fork>
+          <fork id="116" name="2" kind="strong">
+            <transition id="117" dest="118"/>
+          </fork>
+        </state>
+        <state id="118" name="RETRAIT_EV_OFF" initial="false" final="false" default="false">
+          <fork id="119" name="1" kind="strong">
+            <transition id="120" dest="129"/>
+          </fork>
+          <fork id="121" name="2" kind="strong">
+            <transition id="122" dest="88"/>
+          </fork>
+        </state>
+        <state id="123" name="GENERAL_EV_OFF1" initial="false" final="false" default="false">
+          <fork id="124" name="1" kind="strong">
+            <transition id="125" dest="39"/>
+          </fork>
+        </state>
+        <state id="126" name="INTERRUPTION_TO_UP" initial="false" final="false" default="false">
+          <fork id="127" name="1" kind="strong">
+            <transition id="128" dest="100"/>
+          </fork>
+        </state>
+        <state id="129" name="INTERRUPTION_DOWN" initial="false" final="false" default="false">
+          <fork id="130" name="1" kind="strong">
+            <transition id="131" dest="46"/>
+          </fork>
+        </state>
+        <state id="132" name="WAITING_TO_UP" initial="false" final="false" default="false">
+          <fork id="133" name="1" kind="strong">
+            <times id="134" name="25"/>
+            <transition id="135" dest="126"/>
+          </fork>
+        </state>
+        <state id="136" name="WAITING_DOWN" initial="false" final="false" default="false">
+          <fork id="137" name="1" kind="strong">
+            <times id="138" name="26"/>
+            <transition id="139" dest="129"/>
+          </fork>
+        </state>
+      </automaton>
+    </operator>
+    <package id="140" name="digital"/>
+    <package id="141" name="truthtables">
+      <enum id="142" name="TruthTableValues">
+        <value id="143" name="T" default="false"/>
+        <value id="144" name="F" default="false"/>
+        <value id="145" name="X" default="false"/>
+      </enum>
+    </package>
+    <package id="146" name="linear"/>
+    <package id="147" name="filters"/>
+    <package id="148" name="vect"/>
+    <package id="149" name="math"/>
+    <package id="150" name="mathext">
+      <package id="151" name="mathextimpl"/>
+    </package>
+    <package id="152" name="pwlinear"/>
+    <package id="153" name="lut"/>
+    <package id="154" name="verif"/>
+  </model>
+  <generated>
+    <c>
+      <file id="155" name="Computing_Model.h">
+        <function id="156" name="Computing_Model_init">
+          <parameter id="157" name="outC" type="163" pointer="true"/>
+        </function>
+        <function id="158" name="Computing_Model_reset">
+          <parameter id="159" name="outC" type="163" pointer="true"/>
+        </function>
+        <function id="160" name="Computing_Model">
+          <parameter id="161" name="inC" type="189" pointer="true"/>
+          <parameter id="162" name="outC" type="163" pointer="true"/>
+        </function>
+        <struct id="163" name="outC_Computing_Model">
+          <field id="164" name="general_EV" type="305" pointer="false"/>
+          <field id="165" name="close_EV" type="305" pointer="false"/>
+          <field id="166" name="open_EV" type="305" pointer="false"/>
+          <field id="167" name="retract_EV" type="305" pointer="false"/>
+          <field id="168" name="extend_EV" type="305" pointer="false"/>
+          <field id="169" name="gears_Locked_Down" type="305" pointer="false"/>
+          <field id="170" name="gears_Maneuvring" type="305" pointer="false"/>
+          <field id="171" name="State_Machine_Extend_Gear_reset_act" type="305" pointer="false"/>
+          <field id="172" name="State_Machine_Extend_Gear_state_nxt" type="207" pointer="false"/>
+          <field id="173" name="v3_times_26_size" type="302" pointer="false"/>
+          <field id="174" name="v3_times_25_size" type="302" pointer="false"/>
+          <field id="175" name="v3_times_24_size" type="302" pointer="false"/>
+          <field id="176" name="v3_times_20_size" type="302" pointer="false"/>
+          <field id="177" name="v3_times_19_size" type="302" pointer="false"/>
+          <field id="178" name="v3_times_21_size" type="302" pointer="false"/>
+          <field id="179" name="v3_times_23_size" type="302" pointer="false"/>
+          <field id="180" name="v3_times_22_size" type="302" pointer="false"/>
+          <field id="181" name="init" type="305" pointer="false"/>
+          <field id="182" name="init1" type="305" pointer="false"/>
+          <field id="183" name="init2" type="305" pointer="false"/>
+          <field id="184" name="init3" type="305" pointer="false"/>
+          <field id="185" name="init4" type="305" pointer="false"/>
+          <field id="186" name="init5" type="305" pointer="false"/>
+          <field id="187" name="init6" type="305" pointer="false"/>
+          <field id="188" name="init7" type="305" pointer="false"/>
+        </struct>
+        <struct id="189" name="inC_Computing_Model">
+          <field id="190" name="handle" type="305" pointer="false"/>
+          <field id="191" name="gear_Extended_front" type="305" pointer="false"/>
+          <field id="192" name="gear_Extended_right" type="305" pointer="false"/>
+          <field id="193" name="gear_Extended_left" type="305" pointer="false"/>
+          <field id="194" name="gear_Retracted_front" type="305" pointer="false"/>
+          <field id="195" name="gear_Retracted_right" type="305" pointer="false"/>
+          <field id="196" name="gear_Retracted_left" type="305" pointer="false"/>
+          <field id="197" name="gear_Shock_Absorber_front" type="305" pointer="false"/>
+          <field id="198" name="gear_Shock_Absorber_right" type="305" pointer="false"/>
+          <field id="199" name="gear_Shock_Absorber_left" type="305" pointer="false"/>
+          <field id="200" name="door_Closed_front" type="305" pointer="false"/>
+          <field id="201" name="door_Closed_right" type="305" pointer="false"/>
+          <field id="202" name="door_Closed_left" type="305" pointer="false"/>
+          <field id="203" name="door_Open_front" type="305" pointer="false"/>
+          <field id="204" name="door_Open_right" type="305" pointer="false"/>
+          <field id="205" name="door_Open_left" type="305" pointer="false"/>
+        </struct>
+      </file>
+      <file id="206" name="kcg_types.h">
+        <enum id="207" name="SSM_ST_State_Machine_Extend_Gear" tagName="kcg_tag_SSM_ST_State_Machine_Extend_Gear">
+          <value id="208" name="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          <value id="209" name="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="210" name="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="211" name="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="212" name="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="213" name="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="214" name="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="215" name="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="216" name="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="217" name="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          <value id="218" name="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="219" name="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="220" name="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="221" name="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="222" name="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="223" name="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="224" name="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="225" name="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="226" name="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="227" name="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          <value id="228" name="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="229" name="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear"/>
+        </enum>
+        <enum id="230" name="SSM_TR_State_Machine_Extend_Gear" tagName="kcg_tag_SSM_TR_State_Machine_Extend_Gear">
+          <value id="231" name="SSM_TR_no_trans_State_Machine_Extend_Gear"/>
+          <value id="232" name="SSM_TR_RETRACTED_UP_GEN_EV_ON_1_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          <value id="233" name="SSM_TR_GEN_EV_ON_OPEN_EV_ON_1_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="234" name="SSM_TR_OPEN_EV_ON_WAITING_TO_UP_1_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="235" name="SSM_TR_OPEN_EV_ON_EXTEND_EV_ON_2_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="236" name="SSM_TR_EXTEND_EV_ON_WAITING_TO_UP_1_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="237" name="SSM_TR_EXTEND_EV_ON_EXTEND_EV_OFF_2_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="238" name="SSM_TR_EXTEND_EV_OFF_INTERRUPTION_TO_UP_1_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="239" name="SSM_TR_EXTEND_EV_OFF_OPEN_EV_OFF_2_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="240" name="SSM_TR_CLOSE_EV_ON_WAITING_TO_UP_1_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="241" name="SSM_TR_CLOSE_EV_ON_CLOSE_EV_OFF_2_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="242" name="SSM_TR_CLOSE_EV_OFF_INTERRUPTION_TO_UP_1_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="243" name="SSM_TR_CLOSE_EV_OFF_GENERAL_EV_OFF_2_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="244" name="SSM_TR_OPEN_EV_OFF_INTERRUPTION_TO_UP_1_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="245" name="SSM_TR_OPEN_EV_OFF_CLOSE_EV_ON_2_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="246" name="SSM_TR_GENERAL_EV_OFF_EXTENDED_DOWN_1_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="247" name="SSM_TR_EXTENDED_DOWN_GENERAL_EV_ON_1_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          <value id="248" name="SSM_TR_GENERAL_EV_ON_OPEN_EV_ON1_1_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="249" name="SSM_TR_OPEN_EV_OFF1_INTERRUPTION_DOWN_1_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="250" name="SSM_TR_OPEN_EV_OFF1_CLOSE_EV_ON1_2_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="251" name="SSM_TR_CLOSE_EV_OFF1_INTERRUPTION_DOWN_1_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="252" name="SSM_TR_CLOSE_EV_OFF1_GENERAL_EV_OFF1_2_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="253" name="SSM_TR_OPEN_EV_ON1_WAITING_DOWN_1_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="254" name="SSM_TR_OPEN_EV_ON1_RETRACT_EV_ON_1_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="255" name="SSM_TR_OPEN_EV_ON1_OPEN_EV_OFF1_2_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="256" name="SSM_TR_CLOSE_EV_ON1_WAITING_DOWN_1_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="257" name="SSM_TR_CLOSE_EV_ON1_CLOSE_EV_OFF1_2_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="258" name="SSM_TR_RETRACT_EV_ON_WAITING_DOWN_1_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="259" name="SSM_TR_RETRACT_EV_ON_RETRAIT_EV_OFF_2_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="260" name="SSM_TR_RETRAIT_EV_OFF_INTERRUPTION_DOWN_1_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="261" name="SSM_TR_RETRAIT_EV_OFF_OPEN_EV_OFF1_2_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="262" name="SSM_TR_GENERAL_EV_OFF1_RETRACTED_UP_1_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="263" name="SSM_TR_INTERRUPTION_TO_UP_OPEN_EV_ON1_1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="264" name="SSM_TR_INTERRUPTION_DOWN_OPEN_EV_ON_1_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          <value id="265" name="SSM_TR_WAITING_TO_UP_INTERRUPTION_TO_UP_1_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="266" name="SSM_TR_WAITING_DOWN_INTERRUPTION_DOWN_1_WAITING_DOWN_State_Machine_Extend_Gear"/>
+        </enum>
+        <enum id="267" name="TruthTableValues_truthtables" tagName="kcg_tag_TruthTableValues_truthtables">
+          <value id="268" name="T_truthtables"/>
+          <value id="269" name="F_truthtables"/>
+          <value id="270" name="X_truthtables"/>
+        </enum>
+        <macro id="271" name="kcg_assign_array"/>
+        <macro id="272" name="kcg_assign_struct"/>
+        <macro id="273" name="kcg_lnot_uint8"/>
+        <macro id="274" name="kcg_lnot_uint16"/>
+        <macro id="275" name="kcg_lnot_uint32"/>
+        <macro id="276" name="kcg_lnot_uint64"/>
+        <macro id="277" name="kcg_lsl_uint8"/>
+        <macro id="278" name="kcg_lsl_uint16"/>
+        <macro id="279" name="kcg_lsl_uint32"/>
+        <macro id="280" name="kcg_lsl_uint64"/>
+        <macro id="281" name="kcg_true"/>
+        <macro id="282" name="kcg_false"/>
+        <macro id="283" name="kcg_lit_int8"/>
+        <macro id="284" name="kcg_lit_int16"/>
+        <macro id="285" name="kcg_lit_int32"/>
+        <macro id="286" name="kcg_lit_int64"/>
+        <macro id="287" name="kcg_lit_uint8"/>
+        <macro id="288" name="kcg_lit_uint16"/>
+        <macro id="289" name="kcg_lit_uint32"/>
+        <macro id="290" name="kcg_lit_uint64"/>
+        <macro id="291" name="kcg_lit_size"/>
+        <macro id="292" name="kcg_lit_float64"/>
+        <macro id="293" name="kcg_lit_float32"/>
+        <predefType id="294" name="kcg_int8"/>
+        <predefType id="295" name="kcg_int16"/>
+        <predefType id="296" name="kcg_int32"/>
+        <predefType id="297" name="kcg_int64"/>
+        <predefType id="298" name="kcg_uint8"/>
+        <predefType id="299" name="kcg_uint16"/>
+        <predefType id="300" name="kcg_uint32"/>
+        <predefType id="301" name="kcg_uint64"/>
+        <predefType id="302" name="kcg_size"/>
+        <predefType id="303" name="kcg_float64"/>
+        <predefType id="304" name="kcg_float32"/>
+        <predefType id="305" name="kcg_bool"/>
+        <predefType id="306" name="kcg_char"/>
+        <macro id="307" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="308" name="kcg_consts.h"/>
+      <file id="309" name="kcg_sensors.h"/>
+    </c>
+    <map srcId="303" dstId="292" role="wrapped-lit"/>
+    <map srcId="304" dstId="293" role="wrapped-lit"/>
+    <map srcId="302" dstId="291" role="wrapped-lit"/>
+    <map srcId="301" dstId="290" role="wrapped-lit"/>
+    <map srcId="301" dstId="276" role="wrapped-lnot"/>
+    <map srcId="301" dstId="280" role="wrapped-lsl"/>
+    <map srcId="300" dstId="289" role="wrapped-lit"/>
+    <map srcId="300" dstId="275" role="wrapped-lnot"/>
+    <map srcId="300" dstId="279" role="wrapped-lsl"/>
+    <map srcId="299" dstId="288" role="wrapped-lit"/>
+    <map srcId="299" dstId="274" role="wrapped-lnot"/>
+    <map srcId="299" dstId="278" role="wrapped-lsl"/>
+    <map srcId="298" dstId="287" role="wrapped-lit"/>
+    <map srcId="298" dstId="273" role="wrapped-lnot"/>
+    <map srcId="298" dstId="277" role="wrapped-lsl"/>
+    <map srcId="297" dstId="286" role="wrapped-lit"/>
+    <map srcId="296" dstId="285" role="wrapped-lit"/>
+    <map srcId="295" dstId="284" role="wrapped-lit"/>
+    <map srcId="294" dstId="283" role="wrapped-lit"/>
+  </generated>
+  <map modelId="145" generatedId="270"/>
+  <map modelId="144" generatedId="269"/>
+  <map modelId="143" generatedId="268"/>
+  <map modelId="139" generatedId="266"/>
+  <map modelId="135" generatedId="265"/>
+  <map modelId="131" generatedId="264"/>
+  <map modelId="128" generatedId="263"/>
+  <map modelId="125" generatedId="262"/>
+  <map modelId="122" generatedId="261"/>
+  <map modelId="120" generatedId="260"/>
+  <map modelId="117" generatedId="259"/>
+  <map modelId="115" generatedId="258"/>
+  <map modelId="112" generatedId="257"/>
+  <map modelId="110" generatedId="256"/>
+  <map modelId="107" generatedId="255"/>
+  <map modelId="105" generatedId="254"/>
+  <map modelId="102" generatedId="253"/>
+  <map modelId="99" generatedId="252"/>
+  <map modelId="96" generatedId="251"/>
+  <map modelId="93" generatedId="250"/>
+  <map modelId="90" generatedId="249"/>
+  <map modelId="87" generatedId="248"/>
+  <map modelId="83" generatedId="247"/>
+  <map modelId="80" generatedId="246"/>
+  <map modelId="77" generatedId="245"/>
+  <map modelId="74" generatedId="244"/>
+  <map modelId="71" generatedId="243"/>
+  <map modelId="68" generatedId="242"/>
+  <map modelId="65" generatedId="241"/>
+  <map modelId="63" generatedId="240"/>
+  <map modelId="60" generatedId="239"/>
+  <map modelId="58" generatedId="238"/>
+  <map modelId="55" generatedId="237"/>
+  <map modelId="53" generatedId="236"/>
+  <map modelId="50" generatedId="235"/>
+  <map modelId="48" generatedId="234"/>
+  <map modelId="45" generatedId="233"/>
+  <map modelId="41" generatedId="232"/>
+  <map modelId="38" generatedId="231" role="autom-no-trans-enum"/>
+  <map modelId="42" generatedId="209"/>
+  <map modelId="51" generatedId="211"/>
+  <map modelId="56" generatedId="212"/>
+  <map modelId="66" generatedId="214"/>
+  <map modelId="72" generatedId="215"/>
+  <map modelId="61" generatedId="213"/>
+  <map modelId="78" generatedId="216"/>
+  <map modelId="81" generatedId="217"/>
+  <map modelId="84" generatedId="218"/>
+  <map modelId="108" generatedId="222"/>
+  <map modelId="94" generatedId="220"/>
+  <map modelId="113" generatedId="223"/>
+  <map modelId="118" generatedId="224"/>
+  <map modelId="88" generatedId="219"/>
+  <map modelId="123" generatedId="225"/>
+  <map modelId="39" generatedId="208"/>
+  <map modelId="100" generatedId="221"/>
+  <map modelId="46" generatedId="210"/>
+  <map modelId="132" generatedId="228"/>
+  <map modelId="126" generatedId="226"/>
+  <map modelId="136" generatedId="229"/>
+  <map modelId="129" generatedId="227"/>
+  <map modelId="14" generatedId="157" role="context-parameter"/>
+  <map modelId="14" generatedId="156" role="init-method"/>
+  <map modelId="14" generatedId="159" role="context-parameter"/>
+  <map modelId="14" generatedId="158" role="reset-method"/>
+  <map modelId="14" generatedId="161" role="input-struct-parameter"/>
+  <map modelId="30" generatedId="205"/>
+  <map modelId="29" generatedId="204"/>
+  <map modelId="28" generatedId="203"/>
+  <map modelId="27" generatedId="202"/>
+  <map modelId="26" generatedId="201"/>
+  <map modelId="25" generatedId="200"/>
+  <map modelId="24" generatedId="199"/>
+  <map modelId="23" generatedId="198"/>
+  <map modelId="22" generatedId="197"/>
+  <map modelId="21" generatedId="196"/>
+  <map modelId="20" generatedId="195"/>
+  <map modelId="19" generatedId="194"/>
+  <map modelId="18" generatedId="193"/>
+  <map modelId="17" generatedId="192"/>
+  <map modelId="16" generatedId="191"/>
+  <map modelId="15" generatedId="190"/>
+  <map modelId="14" generatedId="189" role="input-struct-type"/>
+  <map modelId="14" generatedId="162" role="context-parameter"/>
+  <map modelId="138" generatedId="188" role="init"/>
+  <map modelId="134" generatedId="187" role="init"/>
+  <map modelId="98" generatedId="186" role="init"/>
+  <map modelId="92" generatedId="185" role="init"/>
+  <map modelId="86" generatedId="184" role="init"/>
+  <map modelId="76" generatedId="183" role="init"/>
+  <map modelId="70" generatedId="182" role="init"/>
+  <map modelId="44" generatedId="181" role="init"/>
+  <map modelId="44" generatedId="180" role="memory"/>
+  <map modelId="70" generatedId="179" role="memory"/>
+  <map modelId="76" generatedId="178" role="memory"/>
+  <map modelId="86" generatedId="177" role="memory"/>
+  <map modelId="92" generatedId="176" role="memory"/>
+  <map modelId="98" generatedId="175" role="memory"/>
+  <map modelId="134" generatedId="174" role="memory"/>
+  <map modelId="138" generatedId="173" role="memory"/>
+  <map modelId="38" generatedId="172" role="autom-next-state"/>
+  <map modelId="38" generatedId="171" role="autom-active-reset"/>
+  <map modelId="37" generatedId="170"/>
+  <map modelId="36" generatedId="169"/>
+  <map modelId="35" generatedId="168"/>
+  <map modelId="34" generatedId="167"/>
+  <map modelId="33" generatedId="166"/>
+  <map modelId="32" generatedId="165"/>
+  <map modelId="31" generatedId="164"/>
+  <map modelId="14" generatedId="163" role="context-type"/>
+  <map modelId="14" generatedId="155" role="interface-file"/>
+  <map modelId="14" generatedId="160" role="cycle-method"/>
+  <map modelId="142" generatedId="267"/>
+  <map modelId="38" generatedId="230" role="autom-transitions-type"/>
+  <map modelId="38" generatedId="207" role="autom-states-type"/>
+  <map modelId="2" generatedId="306"/>
+  <map modelId="1" generatedId="305"/>
+  <map modelId="12" generatedId="303"/>
+  <map modelId="11" generatedId="304"/>
+  <map modelId="13" generatedId="302"/>
+  <map modelId="10" generatedId="301"/>
+  <map modelId="9" generatedId="300"/>
+  <map modelId="8" generatedId="299"/>
+  <map modelId="7" generatedId="298"/>
+  <map modelId="6" generatedId="297"/>
+  <map modelId="5" generatedId="296"/>
+  <map modelId="4" generatedId="295"/>
+  <map modelId="3" generatedId="294"/>
+</mapping>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** mapping.xml
+** Generation date: 2020-02-07T16:30:49
+*************************************************************$-->

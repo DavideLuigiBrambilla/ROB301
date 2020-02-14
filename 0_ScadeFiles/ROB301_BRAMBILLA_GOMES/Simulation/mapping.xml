@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** Command: kcg66.exe -config C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Simulation/config.txt
+** Generation date: 2020-02-07T16:32:56
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file"
+        value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Simulation/scade_model_without_unused.scade"/>
+    <option name="probes" value="#on#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="debug" value="#on#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="expall" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="target_dir" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Simulation"/>
+    <option name="target" value="C"/>
+    <option name="root" value="Computing_Model"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <predefType id="1" name="bool"/>
+    <predefType id="2" name="char"/>
+    <predefType id="3" name="int8"/>
+    <predefType id="4" name="int16"/>
+    <predefType id="5" name="int32"/>
+    <predefType id="6" name="int64"/>
+    <predefType id="7" name="uint8"/>
+    <predefType id="8" name="uint16"/>
+    <predefType id="9" name="uint32"/>
+    <predefType id="10" name="uint64"/>
+    <predefType id="11" name="float32"/>
+    <predefType id="12" name="float64"/>
+    <predefType id="13" name="size"/>
+    <operator id="14" name="Computing_Model" imported="false" root="true" expanded="false">
+      <input id="15" name="handle" clock="false" type="1"/>
+      <input id="16" name="gear_Extended_front" clock="false" type="1"/>
+      <input id="17" name="gear_Extended_right" clock="false" type="1"/>
+      <input id="18" name="gear_Extended_left" clock="false" type="1"/>
+      <input id="19" name="gear_Retracted_front" clock="false" type="1"/>
+      <input id="20" name="gear_Retracted_right" clock="false" type="1"/>
+      <input id="21" name="gear_Retracted_left" clock="false" type="1"/>
+      <input id="22" name="gear_Shock_Absorber_front" clock="false" type="1"/>
+      <input id="23" name="gear_Shock_Absorber_right" clock="false" type="1"/>
+      <input id="24" name="gear_Shock_Absorber_left" clock="false" type="1"/>
+      <input id="25" name="door_Closed_front" clock="false" type="1"/>
+      <input id="26" name="door_Closed_right" clock="false" type="1"/>
+      <input id="27" name="door_Closed_left" clock="false" type="1"/>
+      <input id="28" name="door_Open_front" clock="false" type="1"/>
+      <input id="29" name="door_Open_right" clock="false" type="1"/>
+      <input id="30" name="door_Open_left" clock="false" type="1"/>
+      <output id="31" name="general_EV" clock="false" type="1"/>
+      <output id="32" name="close_EV" clock="false" type="1"/>
+      <output id="33" name="open_EV" clock="false" type="1"/>
+      <output id="34" name="retract_EV" clock="false" type="1"/>
+      <output id="35" name="extend_EV" clock="false" type="1"/>
+      <output id="36" name="gears_Locked_Down" clock="false" type="1"/>
+      <output id="37" name="gears_Maneuvring" clock="false" type="1"/>
+      <local id="38" name="all_gears_extended" clock="false" type="1"/>
+      <local id="39" name="all_shock_absorber_false" clock="false" type="1"/>
+      <local id="40" name="all_doors_closed" clock="false" type="1"/>
+      <local id="41" name="all_doors_open" clock="false" type="1"/>
+      <local id="42" name="all_gears_retracted" clock="false" type="1"/>
+      <local id="43" name="_L140" clock="false" type="1"/>
+      <local id="44" name="_L139" clock="false" type="1"/>
+      <local id="45" name="_L138" clock="false" type="1"/>
+      <local id="46" name="_L137" clock="false" type="1"/>
+      <local id="47" name="_L136" clock="false" type="1"/>
+      <local id="48" name="_L135" clock="false" type="1"/>
+      <local id="49" name="_L134" clock="false" type="1"/>
+      <local id="50" name="_L133" clock="false" type="1"/>
+      <local id="51" name="_L132" clock="false" type="1"/>
+      <local id="52" name="_L131" clock="false" type="1"/>
+      <local id="53" name="_L130" clock="false" type="1"/>
+      <local id="54" name="_L129" clock="false" type="1"/>
+      <local id="55" name="_L127" clock="false" type="1"/>
+      <local id="56" name="_L126" clock="false" type="1"/>
+      <local id="57" name="_L125" clock="false" type="1"/>
+      <local id="58" name="_L124" clock="false" type="1"/>
+      <local id="59" name="_L123" clock="false" type="1"/>
+      <local id="60" name="_L122" clock="false" type="1"/>
+      <local id="61" name="_L121" clock="false" type="1"/>
+      <local id="62" name="_L120" clock="false" type="1"/>
+      <local id="63" name="_L119" clock="false" type="1"/>
+      <local id="64" name="_L118" clock="false" type="1"/>
+      <local id="65" name="_L105" clock="false" type="1"/>
+      <local id="66" name="_L100" clock="false" type="1"/>
+      <local id="67" name="_L99" clock="false" type="1"/>
+      <local id="68" name="_L98" clock="false" type="1"/>
+      <local id="69" name="_L96" clock="false" type="1"/>
+      <local id="70" name="_L95" clock="false" type="1"/>
+      <local id="71" name="_L94" clock="false" type="1"/>
+      <local id="72" name="_L92" clock="false" type="1"/>
+      <local id="73" name="_L34" clock="false" type="1"/>
+      <local id="74" name="_L33" clock="false" type="1"/>
+      <local id="75" name="_L91" clock="false" type="1"/>
+      <local id="76" name="_L62" clock="false" type="1"/>
+      <local id="77" name="_L61" clock="false" type="1"/>
+      <local id="78" name="_L60" clock="false" type="1"/>
+      <local id="79" name="_L53" clock="false" type="1"/>
+      <local id="80" name="_L52" clock="false" type="1"/>
+      <local id="81" name="_L51" clock="false" type="1"/>
+      <local id="82" name="_L44" clock="false" type="1"/>
+      <local id="83" name="_L43" clock="false" type="1"/>
+      <local id="84" name="_L42" clock="false" type="1"/>
+      <local id="85" name="_L26" clock="false" type="1"/>
+      <local id="86" name="_L25" clock="false" type="1"/>
+      <local id="87" name="_L24" clock="false" type="1"/>
+      <automaton id="88" name="State_Machine_Extend_Gear">
+        <state id="89" name="RETRACTED_UP" initial="true" final="false" default="false">
+          <fork id="90" name="1" kind="strong">
+            <transition id="91" dest="92"/>
+          </fork>
+        </state>
+        <state id="92" name="GEN_EV_ON" initial="false" final="false" default="false">
+          <local id="93" name="_L1" clock="false" type="1"/>
+          <fork id="94" name="1" kind="strong">
+            <times id="95" name="22"/>
+            <transition id="96" dest="97"/>
+          </fork>
+        </state>
+        <state id="97" name="OPEN_EV_ON" initial="false" final="false" default="false">
+          <local id="98" name="_L1" clock="false" type="1"/>
+          <local id="99" name="_L2" clock="false" type="1"/>
+          <fork id="100" name="1" kind="strong">
+            <transition id="101" dest="212"/>
+          </fork>
+          <fork id="102" name="2" kind="strong">
+            <transition id="103" dest="104"/>
+          </fork>
+        </state>
+        <state id="104" name="EXTEND_EV_ON" initial="false" final="false" default="false">
+          <local id="105" name="_L1" clock="false" type="1"/>
+          <fork id="106" name="1" kind="strong">
+            <transition id="107" dest="212"/>
+          </fork>
+          <fork id="108" name="2" kind="strong">
+            <transition id="109" dest="110"/>
+          </fork>
+        </state>
+        <state id="110" name="EXTEND_EV_OFF" initial="false" final="false" default="false">
+          <local id="111" name="_L1" clock="false" type="1"/>
+          <local id="112" name="_L2" clock="false" type="1"/>
+          <fork id="113" name="1" kind="strong">
+            <transition id="114" dest="200"/>
+          </fork>
+          <fork id="115" name="2" kind="strong">
+            <transition id="116" dest="131"/>
+          </fork>
+        </state>
+        <state id="117" name="CLOSE_EV_ON" initial="false" final="false" default="false">
+          <local id="118" name="_L1" clock="false" type="1"/>
+          <fork id="119" name="1" kind="strong">
+            <transition id="120" dest="212"/>
+          </fork>
+          <fork id="121" name="2" kind="strong">
+            <transition id="122" dest="123"/>
+          </fork>
+        </state>
+        <state id="123" name="CLOSE_EV_OFF" initial="false" final="false" default="false">
+          <local id="124" name="_L1" clock="false" type="1"/>
+          <local id="125" name="_L3" clock="false" type="1"/>
+          <fork id="126" name="1" kind="strong">
+            <transition id="127" dest="200"/>
+          </fork>
+          <fork id="128" name="2" kind="strong">
+            <times id="129" name="23"/>
+            <transition id="130" dest="138"/>
+          </fork>
+        </state>
+        <state id="131" name="OPEN_EV_OFF" initial="false" final="false" default="false">
+          <local id="132" name="_L1" clock="false" type="1"/>
+          <fork id="133" name="1" kind="strong">
+            <transition id="134" dest="200"/>
+          </fork>
+          <fork id="135" name="2" kind="strong">
+            <times id="136" name="21"/>
+            <transition id="137" dest="117"/>
+          </fork>
+        </state>
+        <state id="138" name="GENERAL_EV_OFF" initial="false" final="false" default="false">
+          <local id="139" name="_L1" clock="false" type="1"/>
+          <fork id="140" name="1" kind="strong">
+            <transition id="141" dest="142"/>
+          </fork>
+        </state>
+        <state id="142" name="EXTENDED_DOWN" initial="false" final="false" default="false">
+          <local id="143" name="_L1" clock="false" type="1"/>
+          <local id="144" name="_L3" clock="false" type="1"/>
+          <fork id="145" name="1" kind="strong">
+            <transition id="146" dest="147"/>
+          </fork>
+        </state>
+        <state id="147" name="GENERAL_EV_ON" initial="false" final="false" default="false">
+          <local id="148" name="_L1" clock="false" type="1"/>
+          <fork id="149" name="1" kind="strong">
+            <times id="150" name="19"/>
+            <transition id="151" dest="167"/>
+          </fork>
+        </state>
+        <state id="152" name="OPEN_EV_OFF1" initial="false" final="false" default="false">
+          <local id="153" name="_L1" clock="false" type="1"/>
+          <fork id="154" name="1" kind="strong">
+            <transition id="155" dest="206"/>
+          </fork>
+          <fork id="156" name="2" kind="strong">
+            <times id="157" name="20"/>
+            <transition id="158" dest="177"/>
+          </fork>
+        </state>
+        <state id="159" name="CLOSE_EV_OFF1" initial="false" final="false" default="false">
+          <local id="160" name="_L1" clock="false" type="1"/>
+          <local id="161" name="_L2" clock="false" type="1"/>
+          <fork id="162" name="1" kind="strong">
+            <transition id="163" dest="206"/>
+          </fork>
+          <fork id="164" name="2" kind="strong">
+            <times id="165" name="24"/>
+            <transition id="166" dest="196"/>
+          </fork>
+        </state>
+        <state id="167" name="OPEN_EV_ON1" initial="false" final="false" default="false">
+          <local id="168" name="_L1" clock="false" type="1"/>
+          <local id="169" name="_L2" clock="false" type="1"/>
+          <fork id="170" name="1" kind="strong">
+            <transition id="171" dest="216"/>
+          </fork>
+          <fork id="172" name="2" kind="strong">
+            <fork id="173" name="1" kind="strong">
+              <transition id="174" dest="183"/>
+            </fork>
+            <fork id="175" name="2" kind="strong">
+              <transition id="176" dest="152"/>
+            </fork>
+          </fork>
+        </state>
+        <state id="177" name="CLOSE_EV_ON1" initial="false" final="false" default="false">
+          <local id="178" name="_L1" clock="false" type="1"/>
+          <fork id="179" name="1" kind="strong">
+            <transition id="180" dest="216"/>
+          </fork>
+          <fork id="181" name="2" kind="strong">
+            <transition id="182" dest="159"/>
+          </fork>
+        </state>
+        <state id="183" name="RETRACT_EV_ON" initial="false" final="false" default="false">
+          <local id="184" name="_L1" clock="false" type="1"/>
+          <fork id="185" name="1" kind="strong">
+            <transition id="186" dest="216"/>
+          </fork>
+          <fork id="187" name="2" kind="strong">
+            <transition id="188" dest="189"/>
+          </fork>
+        </state>
+        <state id="189" name="RETRAIT_EV_OFF" initial="false" final="false" default="false">
+          <local id="190" name="_L1" clock="false" type="1"/>
+          <local id="191" name="_L2" clock="false" type="1"/>
+          <fork id="192" name="1" kind="strong">
+            <transition id="193" dest="206"/>
+          </fork>
+          <fork id="194" name="2" kind="strong">
+            <transition id="195" dest="152"/>
+          </fork>
+        </state>
+        <state id="196" name="GENERAL_EV_OFF1" initial="false" final="false" default="false">
+          <local id="197" name="_L1" clock="false" type="1"/>
+          <fork id="198" name="1" kind="strong">
+            <transition id="199" dest="89"/>
+          </fork>
+        </state>
+        <state id="200" name="INTERRUPTION_TO_UP" initial="false" final="false" default="false">
+          <local id="201" name="_L1" clock="false" type="1"/>
+          <local id="202" name="_L2" clock="false" type="1"/>
+          <local id="203" name="_L3" clock="false" type="1"/>
+          <fork id="204" name="1" kind="strong">
+            <transition id="205" dest="167"/>
+          </fork>
+        </state>
+        <state id="206" name="INTERRUPTION_DOWN" initial="false" final="false" default="false">
+          <local id="207" name="_L1" clock="false" type="1"/>
+          <local id="208" name="_L2" clock="false" type="1"/>
+          <local id="209" name="_L3" clock="false" type="1"/>
+          <fork id="210" name="1" kind="strong">
+            <transition id="211" dest="97"/>
+          </fork>
+        </state>
+        <state id="212" name="WAITING_TO_UP" initial="false" final="false" default="false">
+          <fork id="213" name="1" kind="strong">
+            <times id="214" name="25"/>
+            <transition id="215" dest="200"/>
+          </fork>
+        </state>
+        <state id="216" name="WAITING_DOWN" initial="false" final="false" default="false">
+          <fork id="217" name="1" kind="strong">
+            <times id="218" name="26"/>
+            <transition id="219" dest="206"/>
+          </fork>
+        </state>
+      </automaton>
+    </operator>
+  </model>
+  <generated>
+    <c>
+      <file id="220" name="Computing_Model.h">
+        <function id="221" name="Computing_Model_init">
+          <parameter id="222" name="outC" type="228" pointer="true"/>
+        </function>
+        <function id="223" name="Computing_Model_reset">
+          <parameter id="224" name="outC" type="228" pointer="true"/>
+        </function>
+        <function id="225" name="Computing_Model">
+          <parameter id="226" name="inC" type="371" pointer="true"/>
+          <parameter id="227" name="outC" type="228" pointer="true"/>
+        </function>
+        <struct id="228" name="outC_Computing_Model">
+          <field id="229" name="general_EV" type="483" pointer="false"/>
+          <field id="230" name="close_EV" type="483" pointer="false"/>
+          <field id="231" name="open_EV" type="483" pointer="false"/>
+          <field id="232" name="retract_EV" type="483" pointer="false"/>
+          <field id="233" name="extend_EV" type="483" pointer="false"/>
+          <field id="234" name="gears_Locked_Down" type="483" pointer="false"/>
+          <field id="235" name="gears_Maneuvring" type="483" pointer="false"/>
+          <field id="236" name="init" type="483" pointer="false"/>
+          <field id="237" name="init1" type="483" pointer="false"/>
+          <field id="238" name="init2" type="483" pointer="false"/>
+          <field id="239" name="init3" type="483" pointer="false"/>
+          <field id="240" name="init4" type="483" pointer="false"/>
+          <field id="241" name="init5" type="483" pointer="false"/>
+          <field id="242" name="init6" type="483" pointer="false"/>
+          <field id="243" name="init7" type="483" pointer="false"/>
+          <field id="244" name="v3_times_22_size" type="480" pointer="false"/>
+          <field id="245" name="v3_times_23_size" type="480" pointer="false"/>
+          <field id="246" name="v3_times_21_size" type="480" pointer="false"/>
+          <field id="247" name="v3_times_19_size" type="480" pointer="false"/>
+          <field id="248" name="v3_times_20_size" type="480" pointer="false"/>
+          <field id="249" name="v3_times_24_size" type="480" pointer="false"/>
+          <field id="250" name="v3_times_25_size" type="480" pointer="false"/>
+          <field id="251" name="v3_times_26_size" type="480" pointer="false"/>
+          <field id="252" name="State_Machine_Extend_Gear_state_nxt" type="389" pointer="false"/>
+          <field id="253" name="State_Machine_Extend_Gear_reset_act" type="483" pointer="false"/>
+          <field id="254" name="_8_State_Machine_Extend_Gear_reset_nxt" type="483" pointer="false"/>
+          <field id="255" name="_9_State_Machine_Extend_Gear_state_sel" type="389" pointer="false"/>
+          <field id="256" name="_10_State_Machine_Extend_Gear_state_act" type="389" pointer="false"/>
+          <field id="257" name="o_times_22_size" type="483" pointer="false"/>
+          <field id="258" name="c_times_22_size" type="483" pointer="false"/>
+          <field id="259" name="n_times_22_size" type="480" pointer="false"/>
+          <field id="260" name="v4_times_22_size" type="480" pointer="false"/>
+          <field id="261" name="o_times_23_size" type="483" pointer="false"/>
+          <field id="262" name="c_times_23_size" type="483" pointer="false"/>
+          <field id="263" name="n_times_23_size" type="480" pointer="false"/>
+          <field id="264" name="v4_times_23_size" type="480" pointer="false"/>
+          <field id="265" name="o_times_21_size" type="483" pointer="false"/>
+          <field id="266" name="c_times_21_size" type="483" pointer="false"/>
+          <field id="267" name="n_times_21_size" type="480" pointer="false"/>
+          <field id="268" name="v4_times_21_size" type="480" pointer="false"/>
+          <field id="269" name="o_times_19_size" type="483" pointer="false"/>
+          <field id="270" name="c_times_19_size" type="483" pointer="false"/>
+          <field id="271" name="n_times_19_size" type="480" pointer="false"/>
+          <field id="272" name="v4_times_19_size" type="480" pointer="false"/>
+          <field id="273" name="o_times_20_size" type="483" pointer="false"/>
+          <field id="274" name="c_times_20_size" type="483" pointer="false"/>
+          <field id="275" name="n_times_20_size" type="480" pointer="false"/>
+          <field id="276" name="v4_times_20_size" type="480" pointer="false"/>
+          <field id="277" name="o_times_24_size" type="483" pointer="false"/>
+          <field id="278" name="c_times_24_size" type="483" pointer="false"/>
+          <field id="279" name="n_times_24_size" type="480" pointer="false"/>
+          <field id="280" name="v4_times_24_size" type="480" pointer="false"/>
+          <field id="281" name="o_times_25_size" type="483" pointer="false"/>
+          <field id="282" name="c_times_25_size" type="483" pointer="false"/>
+          <field id="283" name="n_times_25_size" type="480" pointer="false"/>
+          <field id="284" name="v4_times_25_size" type="480" pointer="false"/>
+          <field id="285" name="o_times_26_size" type="483" pointer="false"/>
+          <field id="286" name="c_times_26_size" type="483" pointer="false"/>
+          <field id="287" name="n_times_26_size" type="480" pointer="false"/>
+          <field id="288" name="v4_times_26_size" type="480" pointer="false"/>
+          <field id="289" name="_L1_GEN_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="290" name="_L2_OPEN_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="291" name="_L1_OPEN_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="292" name="_L1_EXTEND_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="293" name="_L2_EXTEND_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="294" name="_L1_EXTEND_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="295" name="_L1_CLOSE_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="296" name="_L3_CLOSE_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="297" name="_L1_CLOSE_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="298" name="_L1_OPEN_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="299" name="_L1_GENERAL_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="300" name="_L3_EXTENDED_DOWN_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="301" name="_L1_EXTENDED_DOWN_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="302" name="_L1_GENERAL_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="303" name="_L1_OPEN_EV_OFF1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="304" name="_L2_CLOSE_EV_OFF1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="305" name="_L1_CLOSE_EV_OFF1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="306" name="_L2_OPEN_EV_ON1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="307" name="_L1_OPEN_EV_ON1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="308" name="_L1_CLOSE_EV_ON1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="309" name="_L1_RETRACT_EV_ON_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="310" name="_L2_RETRAIT_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="311" name="_L1_RETRAIT_EV_OFF_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="312" name="_L1_GENERAL_EV_OFF1_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="313" name="_L3_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="314" name="_L2_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="315" name="_L1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="316" name="_L3_INTERRUPTION_DOWN_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="317" name="_L2_INTERRUPTION_DOWN_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="318" name="_L1_INTERRUPTION_DOWN_State_Machine_Extend_Gear" type="483" pointer="false"/>
+          <field id="319" name="State_Machine_Extend_Gear_fired_strong" type="412" pointer="false"/>
+          <field id="320" name="_11_State_Machine_Extend_Gear_fired" type="412" pointer="false"/>
+          <field id="321" name="all_gears_extended" type="483" pointer="false"/>
+          <field id="322" name="all_shock_absorber_false" type="483" pointer="false"/>
+          <field id="323" name="all_doors_closed" type="483" pointer="false"/>
+          <field id="324" name="all_doors_open" type="483" pointer="false"/>
+          <field id="325" name="all_gears_retracted" type="483" pointer="false"/>
+          <field id="326" name="_L140" type="483" pointer="false"/>
+          <field id="327" name="_L139" type="483" pointer="false"/>
+          <field id="328" name="_L138" type="483" pointer="false"/>
+          <field id="329" name="_L137" type="483" pointer="false"/>
+          <field id="330" name="_L136" type="483" pointer="false"/>
+          <field id="331" name="_L135" type="483" pointer="false"/>
+          <field id="332" name="_L134" type="483" pointer="false"/>
+          <field id="333" name="_L133" type="483" pointer="false"/>
+          <field id="334" name="_L132" type="483" pointer="false"/>
+          <field id="335" name="_L131" type="483" pointer="false"/>
+          <field id="336" name="_L130" type="483" pointer="false"/>
+          <field id="337" name="_L129" type="483" pointer="false"/>
+          <field id="338" name="_L127" type="483" pointer="false"/>
+          <field id="339" name="_L126" type="483" pointer="false"/>
+          <field id="340" name="_L125" type="483" pointer="false"/>
+          <field id="341" name="_L124" type="483" pointer="false"/>
+          <field id="342" name="_L123" type="483" pointer="false"/>
+          <field id="343" name="_L122" type="483" pointer="false"/>
+          <field id="344" name="_L121" type="483" pointer="false"/>
+          <field id="345" name="_L120" type="483" pointer="false"/>
+          <field id="346" name="_L119" type="483" pointer="false"/>
+          <field id="347" name="_L118" type="483" pointer="false"/>
+          <field id="348" name="_L105" type="483" pointer="false"/>
+          <field id="349" name="_L100" type="483" pointer="false"/>
+          <field id="350" name="_L99" type="483" pointer="false"/>
+          <field id="351" name="_L98" type="483" pointer="false"/>
+          <field id="352" name="_L96" type="483" pointer="false"/>
+          <field id="353" name="_L95" type="483" pointer="false"/>
+          <field id="354" name="_L94" type="483" pointer="false"/>
+          <field id="355" name="_L92" type="483" pointer="false"/>
+          <field id="356" name="_L34" type="483" pointer="false"/>
+          <field id="357" name="_L33" type="483" pointer="false"/>
+          <field id="358" name="_L91" type="483" pointer="false"/>
+          <field id="359" name="_L62" type="483" pointer="false"/>
+          <field id="360" name="_L61" type="483" pointer="false"/>
+          <field id="361" name="_L60" type="483" pointer="false"/>
+          <field id="362" name="_L53" type="483" pointer="false"/>
+          <field id="363" name="_L52" type="483" pointer="false"/>
+          <field id="364" name="_L51" type="483" pointer="false"/>
+          <field id="365" name="_L44" type="483" pointer="false"/>
+          <field id="366" name="_L43" type="483" pointer="false"/>
+          <field id="367" name="_L42" type="483" pointer="false"/>
+          <field id="368" name="_L26" type="483" pointer="false"/>
+          <field id="369" name="_L25" type="483" pointer="false"/>
+          <field id="370" name="_L24" type="483" pointer="false"/>
+        </struct>
+        <struct id="371" name="inC_Computing_Model">
+          <field id="372" name="handle" type="483" pointer="false"/>
+          <field id="373" name="gear_Extended_front" type="483" pointer="false"/>
+          <field id="374" name="gear_Extended_right" type="483" pointer="false"/>
+          <field id="375" name="gear_Extended_left" type="483" pointer="false"/>
+          <field id="376" name="gear_Retracted_front" type="483" pointer="false"/>
+          <field id="377" name="gear_Retracted_right" type="483" pointer="false"/>
+          <field id="378" name="gear_Retracted_left" type="483" pointer="false"/>
+          <field id="379" name="gear_Shock_Absorber_front" type="483" pointer="false"/>
+          <field id="380" name="gear_Shock_Absorber_right" type="483" pointer="false"/>
+          <field id="381" name="gear_Shock_Absorber_left" type="483" pointer="false"/>
+          <field id="382" name="door_Closed_front" type="483" pointer="false"/>
+          <field id="383" name="door_Closed_right" type="483" pointer="false"/>
+          <field id="384" name="door_Closed_left" type="483" pointer="false"/>
+          <field id="385" name="door_Open_front" type="483" pointer="false"/>
+          <field id="386" name="door_Open_right" type="483" pointer="false"/>
+          <field id="387" name="door_Open_left" type="483" pointer="false"/>
+        </struct>
+      </file>
+      <file id="388" name="kcg_types.h">
+        <enum id="389" name="SSM_ST_State_Machine_Extend_Gear" tagName="kcg_tag_SSM_ST_State_Machine_Extend_Gear">
+          <value id="390" name="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          <value id="391" name="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="392" name="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="393" name="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="394" name="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="395" name="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="396" name="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="397" name="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="398" name="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="399" name="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          <value id="400" name="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="401" name="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="402" name="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="403" name="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="404" name="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="405" name="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="406" name="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="407" name="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="408" name="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="409" name="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          <value id="410" name="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="411" name="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear"/>
+        </enum>
+        <enum id="412" name="SSM_TR_State_Machine_Extend_Gear" tagName="kcg_tag_SSM_TR_State_Machine_Extend_Gear">
+          <value id="413" name="SSM_TR_no_trans_State_Machine_Extend_Gear"/>
+          <value id="414" name="SSM_TR_RETRACTED_UP_GEN_EV_ON_1_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          <value id="415" name="SSM_TR_GEN_EV_ON_OPEN_EV_ON_1_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="416" name="SSM_TR_OPEN_EV_ON_WAITING_TO_UP_1_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="417" name="SSM_TR_OPEN_EV_ON_EXTEND_EV_ON_2_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="418" name="SSM_TR_EXTEND_EV_ON_WAITING_TO_UP_1_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="419" name="SSM_TR_EXTEND_EV_ON_EXTEND_EV_OFF_2_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="420" name="SSM_TR_EXTEND_EV_OFF_INTERRUPTION_TO_UP_1_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="421" name="SSM_TR_EXTEND_EV_OFF_OPEN_EV_OFF_2_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="422" name="SSM_TR_CLOSE_EV_ON_WAITING_TO_UP_1_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="423" name="SSM_TR_CLOSE_EV_ON_CLOSE_EV_OFF_2_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="424" name="SSM_TR_CLOSE_EV_OFF_INTERRUPTION_TO_UP_1_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="425" name="SSM_TR_CLOSE_EV_OFF_GENERAL_EV_OFF_2_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="426" name="SSM_TR_OPEN_EV_OFF_INTERRUPTION_TO_UP_1_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="427" name="SSM_TR_OPEN_EV_OFF_CLOSE_EV_ON_2_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="428" name="SSM_TR_GENERAL_EV_OFF_EXTENDED_DOWN_1_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="429" name="SSM_TR_EXTENDED_DOWN_GENERAL_EV_ON_1_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          <value id="430" name="SSM_TR_GENERAL_EV_ON_OPEN_EV_ON1_1_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="431" name="SSM_TR_OPEN_EV_OFF1_INTERRUPTION_DOWN_1_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="432" name="SSM_TR_OPEN_EV_OFF1_CLOSE_EV_ON1_2_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="433" name="SSM_TR_CLOSE_EV_OFF1_INTERRUPTION_DOWN_1_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="434" name="SSM_TR_CLOSE_EV_OFF1_GENERAL_EV_OFF1_2_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="435" name="SSM_TR_OPEN_EV_ON1_WAITING_DOWN_1_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="436" name="SSM_TR_OPEN_EV_ON1_RETRACT_EV_ON_1_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="437" name="SSM_TR_OPEN_EV_ON1_OPEN_EV_OFF1_2_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="438" name="SSM_TR_CLOSE_EV_ON1_WAITING_DOWN_1_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="439" name="SSM_TR_CLOSE_EV_ON1_CLOSE_EV_OFF1_2_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          <value id="440" name="SSM_TR_RETRACT_EV_ON_WAITING_DOWN_1_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="441" name="SSM_TR_RETRACT_EV_ON_RETRAIT_EV_OFF_2_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          <value id="442" name="SSM_TR_RETRAIT_EV_OFF_INTERRUPTION_DOWN_1_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="443" name="SSM_TR_RETRAIT_EV_OFF_OPEN_EV_OFF1_2_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          <value id="444" name="SSM_TR_GENERAL_EV_OFF1_RETRACTED_UP_1_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          <value id="445" name="SSM_TR_INTERRUPTION_TO_UP_OPEN_EV_ON1_1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="446" name="SSM_TR_INTERRUPTION_DOWN_OPEN_EV_ON_1_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          <value id="447" name="SSM_TR_WAITING_TO_UP_INTERRUPTION_TO_UP_1_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          <value id="448" name="SSM_TR_WAITING_DOWN_INTERRUPTION_DOWN_1_WAITING_DOWN_State_Machine_Extend_Gear"/>
+        </enum>
+        <macro id="449" name="kcg_assign_array"/>
+        <macro id="450" name="kcg_assign_struct"/>
+        <macro id="451" name="kcg_lnot_uint8"/>
+        <macro id="452" name="kcg_lnot_uint16"/>
+        <macro id="453" name="kcg_lnot_uint32"/>
+        <macro id="454" name="kcg_lnot_uint64"/>
+        <macro id="455" name="kcg_lsl_uint8"/>
+        <macro id="456" name="kcg_lsl_uint16"/>
+        <macro id="457" name="kcg_lsl_uint32"/>
+        <macro id="458" name="kcg_lsl_uint64"/>
+        <macro id="459" name="kcg_true"/>
+        <macro id="460" name="kcg_false"/>
+        <macro id="461" name="kcg_lit_int8"/>
+        <macro id="462" name="kcg_lit_int16"/>
+        <macro id="463" name="kcg_lit_int32"/>
+        <macro id="464" name="kcg_lit_int64"/>
+        <macro id="465" name="kcg_lit_uint8"/>
+        <macro id="466" name="kcg_lit_uint16"/>
+        <macro id="467" name="kcg_lit_uint32"/>
+        <macro id="468" name="kcg_lit_uint64"/>
+        <macro id="469" name="kcg_lit_size"/>
+        <macro id="470" name="kcg_lit_float64"/>
+        <macro id="471" name="kcg_lit_float32"/>
+        <predefType id="472" name="kcg_int8"/>
+        <predefType id="473" name="kcg_int16"/>
+        <predefType id="474" name="kcg_int32"/>
+        <predefType id="475" name="kcg_int64"/>
+        <predefType id="476" name="kcg_uint8"/>
+        <predefType id="477" name="kcg_uint16"/>
+        <predefType id="478" name="kcg_uint32"/>
+        <predefType id="479" name="kcg_uint64"/>
+        <predefType id="480" name="kcg_size"/>
+        <predefType id="481" name="kcg_float64"/>
+        <predefType id="482" name="kcg_float32"/>
+        <predefType id="483" name="kcg_bool"/>
+        <predefType id="484" name="kcg_char"/>
+        <macro id="485" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="486" name="kcg_consts.h"/>
+      <file id="487" name="kcg_sensors.h"/>
+    </c>
+    <map srcId="481" dstId="470" role="wrapped-lit"/>
+    <map srcId="482" dstId="471" role="wrapped-lit"/>
+    <map srcId="480" dstId="469" role="wrapped-lit"/>
+    <map srcId="479" dstId="468" role="wrapped-lit"/>
+    <map srcId="479" dstId="454" role="wrapped-lnot"/>
+    <map srcId="479" dstId="458" role="wrapped-lsl"/>
+    <map srcId="478" dstId="467" role="wrapped-lit"/>
+    <map srcId="478" dstId="453" role="wrapped-lnot"/>
+    <map srcId="478" dstId="457" role="wrapped-lsl"/>
+    <map srcId="477" dstId="466" role="wrapped-lit"/>
+    <map srcId="477" dstId="452" role="wrapped-lnot"/>
+    <map srcId="477" dstId="456" role="wrapped-lsl"/>
+    <map srcId="476" dstId="465" role="wrapped-lit"/>
+    <map srcId="476" dstId="451" role="wrapped-lnot"/>
+    <map srcId="476" dstId="455" role="wrapped-lsl"/>
+    <map srcId="475" dstId="464" role="wrapped-lit"/>
+    <map srcId="474" dstId="463" role="wrapped-lit"/>
+    <map srcId="473" dstId="462" role="wrapped-lit"/>
+    <map srcId="472" dstId="461" role="wrapped-lit"/>
+    <map srcId="318" dstId="256" role="clock"/>
+    <map srcId="318" dstId="409" role="clock-value"/>
+    <map srcId="317" dstId="256" role="clock"/>
+    <map srcId="317" dstId="409" role="clock-value"/>
+    <map srcId="316" dstId="256" role="clock"/>
+    <map srcId="316" dstId="409" role="clock-value"/>
+    <map srcId="315" dstId="256" role="clock"/>
+    <map srcId="315" dstId="408" role="clock-value"/>
+    <map srcId="314" dstId="256" role="clock"/>
+    <map srcId="314" dstId="408" role="clock-value"/>
+    <map srcId="313" dstId="256" role="clock"/>
+    <map srcId="313" dstId="408" role="clock-value"/>
+    <map srcId="312" dstId="256" role="clock"/>
+    <map srcId="312" dstId="407" role="clock-value"/>
+    <map srcId="311" dstId="256" role="clock"/>
+    <map srcId="311" dstId="406" role="clock-value"/>
+    <map srcId="310" dstId="256" role="clock"/>
+    <map srcId="310" dstId="406" role="clock-value"/>
+    <map srcId="309" dstId="256" role="clock"/>
+    <map srcId="309" dstId="405" role="clock-value"/>
+    <map srcId="308" dstId="256" role="clock"/>
+    <map srcId="308" dstId="404" role="clock-value"/>
+    <map srcId="307" dstId="256" role="clock"/>
+    <map srcId="307" dstId="403" role="clock-value"/>
+    <map srcId="306" dstId="256" role="clock"/>
+    <map srcId="306" dstId="403" role="clock-value"/>
+    <map srcId="305" dstId="256" role="clock"/>
+    <map srcId="305" dstId="402" role="clock-value"/>
+    <map srcId="304" dstId="256" role="clock"/>
+    <map srcId="304" dstId="402" role="clock-value"/>
+    <map srcId="303" dstId="256" role="clock"/>
+    <map srcId="303" dstId="401" role="clock-value"/>
+    <map srcId="302" dstId="256" role="clock"/>
+    <map srcId="302" dstId="400" role="clock-value"/>
+    <map srcId="301" dstId="256" role="clock"/>
+    <map srcId="301" dstId="399" role="clock-value"/>
+    <map srcId="300" dstId="256" role="clock"/>
+    <map srcId="300" dstId="399" role="clock-value"/>
+    <map srcId="299" dstId="256" role="clock"/>
+    <map srcId="299" dstId="398" role="clock-value"/>
+    <map srcId="298" dstId="256" role="clock"/>
+    <map srcId="298" dstId="397" role="clock-value"/>
+    <map srcId="297" dstId="256" role="clock"/>
+    <map srcId="297" dstId="396" role="clock-value"/>
+    <map srcId="296" dstId="256" role="clock"/>
+    <map srcId="296" dstId="396" role="clock-value"/>
+    <map srcId="295" dstId="256" role="clock"/>
+    <map srcId="295" dstId="395" role="clock-value"/>
+    <map srcId="294" dstId="256" role="clock"/>
+    <map srcId="294" dstId="394" role="clock-value"/>
+    <map srcId="293" dstId="256" role="clock"/>
+    <map srcId="293" dstId="394" role="clock-value"/>
+    <map srcId="292" dstId="256" role="clock"/>
+    <map srcId="292" dstId="393" role="clock-value"/>
+    <map srcId="291" dstId="256" role="clock"/>
+    <map srcId="291" dstId="392" role="clock-value"/>
+    <map srcId="290" dstId="256" role="clock"/>
+    <map srcId="290" dstId="392" role="clock-value"/>
+    <map srcId="289" dstId="256" role="clock"/>
+    <map srcId="289" dstId="391" role="clock-value"/>
+    <map srcId="288" dstId="255" role="clock"/>
+    <map srcId="288" dstId="411" role="clock-value"/>
+    <map srcId="287" dstId="255" role="clock"/>
+    <map srcId="287" dstId="411" role="clock-value"/>
+    <map srcId="286" dstId="255" role="clock"/>
+    <map srcId="286" dstId="411" role="clock-value"/>
+    <map srcId="285" dstId="255" role="clock"/>
+    <map srcId="285" dstId="411" role="clock-value"/>
+    <map srcId="284" dstId="255" role="clock"/>
+    <map srcId="284" dstId="410" role="clock-value"/>
+    <map srcId="283" dstId="255" role="clock"/>
+    <map srcId="283" dstId="410" role="clock-value"/>
+    <map srcId="282" dstId="255" role="clock"/>
+    <map srcId="282" dstId="410" role="clock-value"/>
+    <map srcId="281" dstId="255" role="clock"/>
+    <map srcId="281" dstId="410" role="clock-value"/>
+    <map srcId="280" dstId="255" role="clock"/>
+    <map srcId="280" dstId="402" role="clock-value"/>
+    <map srcId="279" dstId="255" role="clock"/>
+    <map srcId="279" dstId="402" role="clock-value"/>
+    <map srcId="278" dstId="255" role="clock"/>
+    <map srcId="278" dstId="402" role="clock-value"/>
+    <map srcId="277" dstId="255" role="clock"/>
+    <map srcId="277" dstId="402" role="clock-value"/>
+    <map srcId="276" dstId="255" role="clock"/>
+    <map srcId="276" dstId="401" role="clock-value"/>
+    <map srcId="275" dstId="255" role="clock"/>
+    <map srcId="275" dstId="401" role="clock-value"/>
+    <map srcId="274" dstId="255" role="clock"/>
+    <map srcId="274" dstId="401" role="clock-value"/>
+    <map srcId="273" dstId="255" role="clock"/>
+    <map srcId="273" dstId="401" role="clock-value"/>
+    <map srcId="272" dstId="255" role="clock"/>
+    <map srcId="272" dstId="400" role="clock-value"/>
+    <map srcId="271" dstId="255" role="clock"/>
+    <map srcId="271" dstId="400" role="clock-value"/>
+    <map srcId="270" dstId="255" role="clock"/>
+    <map srcId="270" dstId="400" role="clock-value"/>
+    <map srcId="269" dstId="255" role="clock"/>
+    <map srcId="269" dstId="400" role="clock-value"/>
+    <map srcId="268" dstId="255" role="clock"/>
+    <map srcId="268" dstId="397" role="clock-value"/>
+    <map srcId="267" dstId="255" role="clock"/>
+    <map srcId="267" dstId="397" role="clock-value"/>
+    <map srcId="266" dstId="255" role="clock"/>
+    <map srcId="266" dstId="397" role="clock-value"/>
+    <map srcId="265" dstId="255" role="clock"/>
+    <map srcId="265" dstId="397" role="clock-value"/>
+    <map srcId="264" dstId="255" role="clock"/>
+    <map srcId="264" dstId="396" role="clock-value"/>
+    <map srcId="263" dstId="255" role="clock"/>
+    <map srcId="263" dstId="396" role="clock-value"/>
+    <map srcId="262" dstId="255" role="clock"/>
+    <map srcId="262" dstId="396" role="clock-value"/>
+    <map srcId="261" dstId="255" role="clock"/>
+    <map srcId="261" dstId="396" role="clock-value"/>
+    <map srcId="260" dstId="255" role="clock"/>
+    <map srcId="260" dstId="391" role="clock-value"/>
+    <map srcId="259" dstId="255" role="clock"/>
+    <map srcId="259" dstId="391" role="clock-value"/>
+    <map srcId="258" dstId="255" role="clock"/>
+    <map srcId="258" dstId="391" role="clock-value"/>
+    <map srcId="257" dstId="255" role="clock"/>
+    <map srcId="257" dstId="391" role="clock-value"/>
+    <map srcId="251" dstId="255" role="clock"/>
+    <map srcId="251" dstId="411" role="clock-value"/>
+    <map srcId="250" dstId="255" role="clock"/>
+    <map srcId="250" dstId="410" role="clock-value"/>
+    <map srcId="249" dstId="255" role="clock"/>
+    <map srcId="249" dstId="402" role="clock-value"/>
+    <map srcId="248" dstId="255" role="clock"/>
+    <map srcId="248" dstId="401" role="clock-value"/>
+    <map srcId="247" dstId="255" role="clock"/>
+    <map srcId="247" dstId="400" role="clock-value"/>
+    <map srcId="246" dstId="255" role="clock"/>
+    <map srcId="246" dstId="397" role="clock-value"/>
+    <map srcId="245" dstId="255" role="clock"/>
+    <map srcId="245" dstId="396" role="clock-value"/>
+    <map srcId="244" dstId="255" role="clock"/>
+    <map srcId="244" dstId="391" role="clock-value"/>
+  </generated>
+  <map modelId="91" generatedId="414"/>
+  <map modelId="96" generatedId="415"/>
+  <map modelId="103" generatedId="417"/>
+  <map modelId="101" generatedId="416"/>
+  <map modelId="109" generatedId="419"/>
+  <map modelId="107" generatedId="418"/>
+  <map modelId="116" generatedId="421"/>
+  <map modelId="114" generatedId="420"/>
+  <map modelId="122" generatedId="423"/>
+  <map modelId="120" generatedId="422"/>
+  <map modelId="130" generatedId="425"/>
+  <map modelId="127" generatedId="424"/>
+  <map modelId="137" generatedId="427"/>
+  <map modelId="134" generatedId="426"/>
+  <map modelId="141" generatedId="428"/>
+  <map modelId="146" generatedId="429"/>
+  <map modelId="151" generatedId="430"/>
+  <map modelId="158" generatedId="432"/>
+  <map modelId="155" generatedId="431"/>
+  <map modelId="166" generatedId="434"/>
+  <map modelId="163" generatedId="433"/>
+  <map modelId="176" generatedId="437"/>
+  <map modelId="174" generatedId="436"/>
+  <map modelId="171" generatedId="435"/>
+  <map modelId="182" generatedId="439"/>
+  <map modelId="180" generatedId="438"/>
+  <map modelId="188" generatedId="441"/>
+  <map modelId="186" generatedId="440"/>
+  <map modelId="195" generatedId="443"/>
+  <map modelId="193" generatedId="442"/>
+  <map modelId="199" generatedId="444"/>
+  <map modelId="205" generatedId="445"/>
+  <map modelId="211" generatedId="446"/>
+  <map modelId="215" generatedId="447"/>
+  <map modelId="88" generatedId="413" role="autom-no-trans-enum"/>
+  <map modelId="219" generatedId="448"/>
+  <map modelId="104" generatedId="393"/>
+  <map modelId="110" generatedId="394"/>
+  <map modelId="117" generatedId="395"/>
+  <map modelId="138" generatedId="398"/>
+  <map modelId="142" generatedId="399"/>
+  <map modelId="177" generatedId="404"/>
+  <map modelId="183" generatedId="405"/>
+  <map modelId="189" generatedId="406"/>
+  <map modelId="196" generatedId="407"/>
+  <map modelId="89" generatedId="390"/>
+  <map modelId="167" generatedId="403"/>
+  <map modelId="97" generatedId="392"/>
+  <map modelId="200" generatedId="408"/>
+  <map modelId="206" generatedId="409"/>
+  <map modelId="123" generatedId="396"/>
+  <map modelId="131" generatedId="397"/>
+  <map modelId="147" generatedId="400"/>
+  <map modelId="152" generatedId="401"/>
+  <map modelId="159" generatedId="402"/>
+  <map modelId="212" generatedId="410"/>
+  <map modelId="216" generatedId="411"/>
+  <map modelId="92" generatedId="391"/>
+  <map modelId="14" generatedId="222" role="context-parameter"/>
+  <map modelId="14" generatedId="221" role="init-method"/>
+  <map modelId="14" generatedId="224" role="context-parameter"/>
+  <map modelId="14" generatedId="223" role="reset-method"/>
+  <map modelId="14" generatedId="226" role="input-struct-parameter"/>
+  <map modelId="30" generatedId="387"/>
+  <map modelId="29" generatedId="386"/>
+  <map modelId="28" generatedId="385"/>
+  <map modelId="27" generatedId="384"/>
+  <map modelId="26" generatedId="383"/>
+  <map modelId="25" generatedId="382"/>
+  <map modelId="24" generatedId="381"/>
+  <map modelId="23" generatedId="380"/>
+  <map modelId="22" generatedId="379"/>
+  <map modelId="21" generatedId="378"/>
+  <map modelId="20" generatedId="377"/>
+  <map modelId="19" generatedId="376"/>
+  <map modelId="18" generatedId="375"/>
+  <map modelId="17" generatedId="374"/>
+  <map modelId="16" generatedId="373"/>
+  <map modelId="15" generatedId="372"/>
+  <map modelId="14" generatedId="371" role="input-struct-type"/>
+  <map modelId="14" generatedId="227" role="context-parameter"/>
+  <map modelId="87" generatedId="370"/>
+  <map modelId="86" generatedId="369"/>
+  <map modelId="85" generatedId="368"/>
+  <map modelId="84" generatedId="367"/>
+  <map modelId="83" generatedId="366"/>
+  <map modelId="82" generatedId="365"/>
+  <map modelId="81" generatedId="364"/>
+  <map modelId="80" generatedId="363"/>
+  <map modelId="79" generatedId="362"/>
+  <map modelId="78" generatedId="361"/>
+  <map modelId="77" generatedId="360"/>
+  <map modelId="76" generatedId="359"/>
+  <map modelId="75" generatedId="358"/>
+  <map modelId="74" generatedId="357"/>
+  <map modelId="73" generatedId="356"/>
+  <map modelId="72" generatedId="355"/>
+  <map modelId="71" generatedId="354"/>
+  <map modelId="70" generatedId="353"/>
+  <map modelId="69" generatedId="352"/>
+  <map modelId="68" generatedId="351"/>
+  <map modelId="67" generatedId="350"/>
+  <map modelId="66" generatedId="349"/>
+  <map modelId="65" generatedId="348"/>
+  <map modelId="64" generatedId="347"/>
+  <map modelId="63" generatedId="346"/>
+  <map modelId="62" generatedId="345"/>
+  <map modelId="61" generatedId="344"/>
+  <map modelId="60" generatedId="343"/>
+  <map modelId="59" generatedId="342"/>
+  <map modelId="58" generatedId="341"/>
+  <map modelId="57" generatedId="340"/>
+  <map modelId="56" generatedId="339"/>
+  <map modelId="55" generatedId="338"/>
+  <map modelId="54" generatedId="337"/>
+  <map modelId="53" generatedId="336"/>
+  <map modelId="52" generatedId="335"/>
+  <map modelId="51" generatedId="334"/>
+  <map modelId="50" generatedId="333"/>
+  <map modelId="49" generatedId="332"/>
+  <map modelId="48" generatedId="331"/>
+  <map modelId="47" generatedId="330"/>
+  <map modelId="46" generatedId="329"/>
+  <map modelId="45" generatedId="328"/>
+  <map modelId="44" generatedId="327"/>
+  <map modelId="43" generatedId="326"/>
+  <map modelId="42" generatedId="325"/>
+  <map modelId="41" generatedId="324"/>
+  <map modelId="40" generatedId="323"/>
+  <map modelId="39" generatedId="322"/>
+  <map modelId="38" generatedId="321"/>
+  <map modelId="88" generatedId="320" role="autom-weak-transition"/>
+  <map modelId="88" generatedId="319" role="autom-strong-transition"/>
+  <map modelId="207" generatedId="318"/>
+  <map modelId="208" generatedId="317"/>
+  <map modelId="209" generatedId="316"/>
+  <map modelId="201" generatedId="315"/>
+  <map modelId="202" generatedId="314"/>
+  <map modelId="203" generatedId="313"/>
+  <map modelId="197" generatedId="312"/>
+  <map modelId="190" generatedId="311"/>
+  <map modelId="191" generatedId="310"/>
+  <map modelId="184" generatedId="309"/>
+  <map modelId="178" generatedId="308"/>
+  <map modelId="168" generatedId="307"/>
+  <map modelId="169" generatedId="306"/>
+  <map modelId="160" generatedId="305"/>
+  <map modelId="161" generatedId="304"/>
+  <map modelId="153" generatedId="303"/>
+  <map modelId="148" generatedId="302"/>
+  <map modelId="143" generatedId="301"/>
+  <map modelId="144" generatedId="300"/>
+  <map modelId="139" generatedId="299"/>
+  <map modelId="132" generatedId="298"/>
+  <map modelId="124" generatedId="297"/>
+  <map modelId="125" generatedId="296"/>
+  <map modelId="118" generatedId="295"/>
+  <map modelId="111" generatedId="294"/>
+  <map modelId="112" generatedId="293"/>
+  <map modelId="105" generatedId="292"/>
+  <map modelId="98" generatedId="291"/>
+  <map modelId="99" generatedId="290"/>
+  <map modelId="93" generatedId="289"/>
+  <map modelId="88" generatedId="256" role="autom-active-state"/>
+  <map modelId="88" generatedId="255" role="autom-selected-state"/>
+  <map modelId="88" generatedId="254" role="autom-next-reset"/>
+  <map modelId="88" generatedId="253" role="autom-active-reset"/>
+  <map modelId="88" generatedId="252" role="autom-next-state"/>
+  <map modelId="218" generatedId="251" role="memory"/>
+  <map modelId="214" generatedId="250" role="memory"/>
+  <map modelId="165" generatedId="249" role="memory"/>
+  <map modelId="157" generatedId="248" role="memory"/>
+  <map modelId="150" generatedId="247" role="memory"/>
+  <map modelId="136" generatedId="246" role="memory"/>
+  <map modelId="129" generatedId="245" role="memory"/>
+  <map modelId="95" generatedId="244" role="memory"/>
+  <map modelId="218" generatedId="243" role="init"/>
+  <map modelId="214" generatedId="242" role="init"/>
+  <map modelId="165" generatedId="241" role="init"/>
+  <map modelId="157" generatedId="240" role="init"/>
+  <map modelId="150" generatedId="239" role="init"/>
+  <map modelId="136" generatedId="238" role="init"/>
+  <map modelId="129" generatedId="237" role="init"/>
+  <map modelId="95" generatedId="236" role="init"/>
+  <map modelId="37" generatedId="235"/>
+  <map modelId="36" generatedId="234"/>
+  <map modelId="35" generatedId="233"/>
+  <map modelId="34" generatedId="232"/>
+  <map modelId="33" generatedId="231"/>
+  <map modelId="32" generatedId="230"/>
+  <map modelId="31" generatedId="229"/>
+  <map modelId="14" generatedId="228" role="context-type"/>
+  <map modelId="14" generatedId="220" role="interface-file"/>
+  <map modelId="14" generatedId="225" role="cycle-method"/>
+  <map modelId="88" generatedId="412" role="autom-transitions-type"/>
+  <map modelId="88" generatedId="389" role="autom-states-type"/>
+  <map modelId="2" generatedId="484"/>
+  <map modelId="1" generatedId="483"/>
+  <map modelId="12" generatedId="481"/>
+  <map modelId="11" generatedId="482"/>
+  <map modelId="13" generatedId="480"/>
+  <map modelId="10" generatedId="479"/>
+  <map modelId="9" generatedId="478"/>
+  <map modelId="8" generatedId="477"/>
+  <map modelId="7" generatedId="476"/>
+  <map modelId="6" generatedId="475"/>
+  <map modelId="5" generatedId="474"/>
+  <map modelId="4" generatedId="473"/>
+  <map modelId="3" generatedId="472"/>
+</mapping>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** mapping.xml
+** Generation date: 2020-02-07T16:32:56
+*************************************************************$-->

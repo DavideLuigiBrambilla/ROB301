@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:mtc="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+	<declarations>
+		<Package name="MTCEx">
+			<declarations>
+				<Package name="MTC_Instrumenters" href="MTC_Instrumenters.xscade"/>
+				<Package name="MTC_Observers" href="MTC_Observers.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/f690/53D8/778/5e3d88053e72"/>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libverif_MTC_INST/libverif.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libpwlinear_MTC_INST/lut.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libpwlinear_MTC_INST/pwlinear.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libmathext_MTC_INST/mathext.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libmath_MTC_INST/math.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libmath_MTC_INST/vect.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/liblinear_MTC_INST/filters.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/liblinear_MTC_INST/linear.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libmtcROB301_BRAMBILLA_GOMES_MTC_INST/MTCEx.xscade"/>
+    <Option name="input_file" value="C:/Program Files (x86)/Esterel Technologies/SCADE R17/SCADE/libraries/SC65/libmtc/MTC.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libdigital_MTC_INST/TruthTables.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/libdigital_MTC_INST/digital.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/ROB301_BRAMBILLA_GOMES.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Computing_Model.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Doors_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Double_Check_Computing_Model.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Gears_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Generic_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Health_Monitor.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sensor_Validity.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub1_Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub1_Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub2_Analogical_Switch_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub2_Pression_Sensor_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub_Doors_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Sub_Gears_Motion_Monitoring.xscade"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Total_Model.xscade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="debug" value="#off#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Coverage"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="Computing_Model"/>
+    <Option name="auth" value="#off#"/>
+    <RootNode headerFile="Computing_Model.h" scadeName="Computing_Model" targetCycleFct="Computing_Model" targetInitFct="Computing_Model_reset" targetInitializationFct="Computing_Model_init">
+      <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="handle" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_front" scadeType="bool" targetName="gear_Extended_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_right" scadeType="bool" targetName="gear_Extended_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_left" scadeType="bool" targetName="gear_Extended_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_front" scadeType="bool" targetName="gear_Retracted_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_right" scadeType="bool" targetName="gear_Retracted_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_left" scadeType="bool" targetName="gear_Retracted_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_front" scadeType="bool" targetName="gear_Shock_Absorber_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_right" scadeType="bool" targetName="gear_Shock_Absorber_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_left" scadeType="bool" targetName="gear_Shock_Absorber_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_front" scadeType="bool" targetName="door_Closed_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_right" scadeType="bool" targetName="door_Closed_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_left" scadeType="bool" targetName="door_Closed_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_front" scadeType="bool" targetName="door_Open_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_right" scadeType="bool" targetName="door_Open_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_left" scadeType="bool" targetName="door_Open_left" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="general_EV" scadeType="bool" targetName="general_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="close_EV" scadeType="bool" targetName="close_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="open_EV" scadeType="bool" targetName="open_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="retract_EV" scadeType="bool" targetName="retract_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="extend_EV" scadeType="bool" targetName="extend_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Locked_Down" scadeType="bool" targetName="gears_Locked_Down" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Maneuvring" scadeType="bool" targetName="gears_Maneuvring" targetType="kcg_bool"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_general_EV_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_close_EV_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_open_EV_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_retract_EV_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_extend_EV_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_gears_Locked_Down_def_MTC_INST"/>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_MTC_gears_Maneuvring_def_MTC_INST"/>
+      <Automaton scadeName="State_Machine_Extend_Gear" targetStatesType="SSM_ST_State_Machine_Extend_Gear" targetTransitionsType="SSM_TR_State_Machine_Extend_Gear">
+        <State scadeName="RETRACTED_UP" targetName="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear">
+          <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_1" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_44_Context_LATCHALL02_MTC_STATE_MTC_OBS_1"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="12" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_RETRACTED_UP_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_RETRACTED_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS1_MTC_OBS">
+                  <Probe clockVal="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS1_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRACTED_UP_1_MTC_INST_12" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_92_Context_LATCHALL02_MTC_Computing_Model_PATHS1_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRACTED_UP_1_MTC_INST_12"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_RETRACTED_UP_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_1" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_93_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_1"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="GEN_EV_ON" targetName="SSM_TR_RETRACTED_UP_GEN_EV_ON_1_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GEN_EV_ON" targetName="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="2" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_2" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_43_Context_LATCHALL02_MTC_STATE_MTC_OBS_2"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="22" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_GEN_EV_ON_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_GEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="22" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS2_MTC_OBS">
+                  <Probe clockVal="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS2_MTC_OBS_22_Computing_Model_State_Machine_Extend_Gear_GEN_EV_ON_1_MTC_INST_22" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_90_Context_LATCHALL04_MTC_Computing_Model_PATHS2_MTC_OBS_22_Computing_Model_State_Machine_Extend_Gear_GEN_EV_ON_1_MTC_INST_22"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="2" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_GEN_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_2" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_91_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_2"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_GEN_EV_ON_OPEN_EV_ON_1_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON" targetName="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="3" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_3" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_42_Context_LATCHALL02_MTC_STATE_MTC_OBS_3"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="3" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_OPEN_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_3" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_89_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_3"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_OPEN_EV_ON_WAITING_TO_UP_1_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON_2_MTC_INST"/>
+              <NodeInlining instName="4" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_OPEN_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_4" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_88_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_4"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="EXTEND_EV_ON" targetName="SSM_TR_OPEN_EV_ON_EXTEND_EV_ON_2_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_ON" targetName="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="4" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_4" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_41_Context_LATCHALL02_MTC_STATE_MTC_OBS_4"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_ON_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="5" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_5" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_87_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_5"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_EXTEND_EV_ON_WAITING_TO_UP_1_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_ON_2_MTC_INST"/>
+              <NodeInlining instName="6" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_6" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_86_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_6"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="EXTEND_EV_OFF" targetName="SSM_TR_EXTEND_EV_ON_EXTEND_EV_OFF_2_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_OFF" targetName="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear">
+          <NodeInlining instName="5" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_5" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_40_Context_LATCHALL02_MTC_STATE_MTC_OBS_5"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_OFF_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_EXTEND_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_EXTEND_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="7" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_EXTEND_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_7" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_85_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_7"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_EXTEND_EV_OFF_INTERRUPTION_TO_UP_1_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_OFF_2_MTC_INST"/>
+              <NodeInlining instName="8" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_false" clockVar="tr_1_clock_EXTEND_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_8" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_84_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_8"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF" targetName="SSM_TR_EXTEND_EV_OFF_OPEN_EV_OFF_2_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON" targetName="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="6" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_6" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_39_Context_LATCHALL02_MTC_STATE_MTC_OBS_6"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="9" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_9" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_83_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_9"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_CLOSE_EV_ON_WAITING_TO_UP_1_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON_2_MTC_INST"/>
+              <NodeInlining instName="10" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_10" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_82_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_10"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF" targetName="SSM_TR_CLOSE_EV_ON_CLOSE_EV_OFF_2_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF" targetName="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear">
+          <NodeInlining instName="7" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_7" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_38_Context_LATCHALL02_MTC_STATE_MTC_OBS_7"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="11" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_11" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_81_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_11"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_CLOSE_EV_OFF_INTERRUPTION_TO_UP_1_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="23" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_2_MTC_INST">
+                <NodeInlining instName="23" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS3_MTC_OBS">
+                  <Probe clockVal="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS3_MTC_OBS_23_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_2_MTC_INST_23" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_79_Context_LATCHALL04_MTC_Computing_Model_PATHS3_MTC_OBS_23_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_2_MTC_INST_23"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="12" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_12" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_80_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_12"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF" targetName="SSM_TR_CLOSE_EV_OFF_GENERAL_EV_OFF_2_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF" targetName="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear">
+          <NodeInlining instName="8" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_8" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_37_Context_LATCHALL02_MTC_STATE_MTC_OBS_8"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="13" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_13" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_78_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_13"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_OPEN_EV_OFF_INTERRUPTION_TO_UP_1_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="21" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_2_MTC_INST">
+                <NodeInlining instName="21" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS4_MTC_OBS">
+                  <Probe clockVal="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS4_MTC_OBS_21_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_2_MTC_INST_21" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_76_Context_LATCHALL04_MTC_Computing_Model_PATHS4_MTC_OBS_21_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_2_MTC_INST_21"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="14" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_14" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_77_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_14"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON" targetName="SSM_TR_OPEN_EV_OFF_CLOSE_EV_ON_2_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF" targetName="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear">
+          <NodeInlining instName="9" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_9" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_36_Context_LATCHALL02_MTC_STATE_MTC_OBS_9"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_OFF_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_GENERAL_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="15" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_15" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_75_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_15"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="EXTENDED_DOWN" targetName="SSM_TR_GENERAL_EV_OFF_EXTENDED_DOWN_1_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTENDED_DOWN" targetName="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear">
+          <NodeInlining instName="10" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_10" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_35_Context_LATCHALL02_MTC_STATE_MTC_OBS_10"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_EXTENDED_DOWN_1_MTC_INST">
+                <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="tr_1_clock_EXTENDED_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_EXTENDED_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="16" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_EXTENDED_DOWN_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_16" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_74_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_16"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_ON" targetName="SSM_TR_EXTENDED_DOWN_GENERAL_EV_ON_1_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_ON" targetName="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="11" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_11" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_34_Context_LATCHALL02_MTC_STATE_MTC_OBS_11"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="19" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_ON_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_GENERAL_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="19" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS5_MTC_OBS">
+                  <Probe clockVal="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS5_MTC_OBS_19_Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_ON_1_MTC_INST_19" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_72_Context_LATCHALL04_MTC_Computing_Model_PATHS5_MTC_OBS_19_Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_ON_1_MTC_INST_19"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="17" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_GENERAL_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_17" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_73_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_17"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_GENERAL_EV_ON_OPEN_EV_ON1_1_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF1" targetName="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear">
+          <NodeInlining instName="12" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_12" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_33_Context_LATCHALL02_MTC_STATE_MTC_OBS_12"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="19" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS7_MTC_OBS">
+                  <Probe clockVal="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS7_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_1_MTC_INST_19" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_69_Context_LATCHALL02_MTC_Computing_Model_PATHS7_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_1_MTC_INST_19"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="18" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_18" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_71_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_18"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_OPEN_EV_OFF1_INTERRUPTION_DOWN_1_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="20" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_2_MTC_INST">
+                <NodeInlining instName="20" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS6_MTC_OBS">
+                  <Probe clockVal="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS6_MTC_OBS_20_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_2_MTC_INST_20" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_68_Context_LATCHALL04_MTC_Computing_Model_PATHS6_MTC_OBS_20_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_2_MTC_INST_20"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="19" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_19" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_70_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_19"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON1" targetName="SSM_TR_OPEN_EV_OFF1_CLOSE_EV_ON1_2_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF1" targetName="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear">
+          <NodeInlining instName="13" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_13" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_32_Context_LATCHALL02_MTC_STATE_MTC_OBS_13"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="21" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS9_MTC_OBS">
+                  <Probe clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS9_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_1_MTC_INST_21" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_65_Context_LATCHALL02_MTC_Computing_Model_PATHS9_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_1_MTC_INST_21"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="20" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_20" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_67_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_20"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_CLOSE_EV_OFF1_INTERRUPTION_DOWN_1_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="24" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_2_MTC_INST">
+                <NodeInlining instName="24" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS8_MTC_OBS">
+                  <Probe clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_Computing_Model_PATHS8_MTC_OBS_24_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_2_MTC_INST_24" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_64_Context_LATCHALL04_MTC_Computing_Model_PATHS8_MTC_OBS_24_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_2_MTC_INST_24"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="21" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_21" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_66_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_21"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF1" targetName="SSM_TR_CLOSE_EV_OFF1_GENERAL_EV_OFF1_2_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON1" targetName="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear">
+          <NodeInlining instName="14" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_14" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_31_Context_LATCHALL02_MTC_STATE_MTC_OBS_14"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="16" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS11_MTC_OBS">
+                  <Probe clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_1_MTC_ALL1_Computing_Model_PATHS11_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_1_MTC_INST_16" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_59_Context_LATCHALL02_MTC_Computing_Model_PATHS11_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_1_MTC_INST_16"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="22" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_22" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_63_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_22"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_OPEN_EV_ON1_WAITING_DOWN_1_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_MTC_INST"/>
+              <NodeInlining instName="25" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_25" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_62_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_25"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Fork priority="1">
+              <Condition/>
+              <Action>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_1_MTC_INST"/>
+                <NodeInlining instName="23" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                  <Probe clockVal="kcg_true" clockVar="tr_1_clock_2_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_23" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                      <OutCtxVar targetName="_61_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_23"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </Action>
+              <Transition kind="strong" scadeDest="RETRACT_EV_ON" targetName="SSM_TR_OPEN_EV_ON1_RETRACT_EV_ON_1_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Action>
+                <NodeInlining instName="15" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_2_MTC_INST">
+                  <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS10_MTC_OBS">
+                    <Probe clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_2_MTC_ALL1_Computing_Model_PATHS10_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_2_MTC_INST_15" targetType="Result_MTC"/>
+                    <ActivateEveryDefault>
+                      <Condition/>
+                      <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                        <OutCtxVar targetName="_58_Context_LATCHALL02_MTC_Computing_Model_PATHS10_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_2_MTC_INST_15"/>
+                      </NodeInstance>
+                      <Default/>
+                    </ActivateEveryDefault>
+                  </NodeInlining>
+                </NodeInlining>
+                <NodeInlining instName="24" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                  <Probe clockVal="kcg_true" clockVar="tr_2_clock_2_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_24" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                      <OutCtxVar targetName="_60_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_24"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </Action>
+              <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_OPEN_EV_ON1_OPEN_EV_OFF1_2_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON1" targetName="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear">
+          <NodeInlining instName="15" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_15" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_30_Context_LATCHALL02_MTC_STATE_MTC_OBS_15"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="20" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS12_MTC_OBS">
+                  <Probe clockVal="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_3_MTC_ALL1_Computing_Model_PATHS12_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_1_MTC_INST_20" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_55_Context_LATCHALL02_MTC_Computing_Model_PATHS12_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_1_MTC_INST_20"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="26" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_26" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_57_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_26"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_CLOSE_EV_ON1_WAITING_DOWN_1_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_2_MTC_INST"/>
+              <NodeInlining instName="27" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_27" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_56_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_27"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF1" targetName="SSM_TR_CLOSE_EV_ON1_CLOSE_EV_OFF1_2_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRACT_EV_ON" targetName="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear">
+          <NodeInlining instName="16" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_16" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_29_Context_LATCHALL02_MTC_STATE_MTC_OBS_16"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="17" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS13_MTC_OBS">
+                  <Probe clockVal="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_4_MTC_ALL1_Computing_Model_PATHS13_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_1_MTC_INST_17" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="_52_Context_LATCHALL02_MTC_Computing_Model_PATHS13_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_1_MTC_INST_17"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="28" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_28" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_54_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_28"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_RETRACT_EV_ON_WAITING_DOWN_1_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_2_MTC_INST"/>
+              <NodeInlining instName="29" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_2_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_29" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_53_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_29"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="RETRAIT_EV_OFF" targetName="SSM_TR_RETRACT_EV_ON_RETRAIT_EV_OFF_2_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRAIT_EV_OFF" targetName="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear">
+          <NodeInlining instName="17" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_17" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_28_Context_LATCHALL02_MTC_STATE_MTC_OBS_17"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="18" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_RETRAIT_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS14_MTC_OBS">
+                  <Probe clockVal="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_5_MTC_ALL1_Computing_Model_PATHS14_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_1_MTC_INST_18" targetType="Result_MTC"/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                      <OutCtxVar targetName="Context_LATCHALL02_MTC_Computing_Model_PATHS14_MTC_OBS_1_Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_1_MTC_INST_18"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="30" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_RETRAIT_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_30" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_51_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_30"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_RETRAIT_EV_OFF_INTERRUPTION_DOWN_1_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_2_MTC_INST"/>
+              <NodeInlining instName="31" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_false" clockVar="tr_1_clock_RETRAIT_EV_OFF_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_31" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_50_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_31"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_RETRAIT_EV_OFF_OPEN_EV_OFF1_2_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF1" targetName="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear">
+          <NodeInlining instName="18" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_18" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_27_Context_LATCHALL02_MTC_STATE_MTC_OBS_18"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_OFF1_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_GENERAL_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="32" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_32" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_49_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_32"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="RETRACTED_UP" targetName="SSM_TR_GENERAL_EV_OFF1_RETRACTED_UP_1_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_TO_UP" targetName="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear">
+          <NodeInlining instName="19" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_19" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_26_Context_LATCHALL02_MTC_STATE_MTC_OBS_19"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_INTERRUPTION_TO_UP_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="33" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_33" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_48_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_33"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_INTERRUPTION_TO_UP_OPEN_EV_ON1_1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_DOWN" targetName="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear">
+          <NodeInlining instName="20" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_20" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_25_Context_LATCHALL02_MTC_STATE_MTC_OBS_20"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="1" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_INTERRUPTION_DOWN_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_INTERRUPTION_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+              </NodeInlining>
+              <NodeInlining instName="34" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_34" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_47_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_34"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_INTERRUPTION_DOWN_OPEN_EV_ON_1_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_TO_UP" targetName="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear">
+          <NodeInlining instName="21" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_21" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="_24_Context_LATCHALL02_MTC_STATE_MTC_OBS_21"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="25" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_WAITING_TO_UP_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_WAITING_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="25" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS15_MTC_OBS">
+                  <Probe clockVal="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_6_MTC_ALL1_Computing_Model_PATHS15_MTC_OBS_25_Computing_Model_State_Machine_Extend_Gear_WAITING_TO_UP_1_MTC_INST_25" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="_45_Context_LATCHALL04_MTC_Computing_Model_PATHS15_MTC_OBS_25_Computing_Model_State_Machine_Extend_Gear_WAITING_TO_UP_1_MTC_INST_25"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="35" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_WAITING_TO_UP_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_35" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="_46_Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_35"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_WAITING_TO_UP_INTERRUPTION_TO_UP_1_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_DOWN" targetName="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear">
+          <NodeInlining instName="22" scadeName="MTCEx::MTC_Observers::STATE_MTC_OBS">
+            <Probe clockVal="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear" clockVar="_95_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_STATE_MTC_OBS_22" targetType="Result_MTC"/>
+            <ActivateEveryDefault>
+              <Condition/>
+              <NodeInstance refName="LATCHALL02_MTC" scadeName="MTC::LATCHALL02">
+                <OutCtxVar targetName="Context_LATCHALL02_MTC_STATE_MTC_OBS_22"/>
+              </NodeInstance>
+              <Default/>
+            </ActivateEveryDefault>
+          </NodeInlining>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <NodeInlining instName="26" scadeName="MTCEx::MTC_Instrumenters::Computing_Model_State_Machine_Extend_Gear_WAITING_DOWN_1_MTC_INST">
+                <Output inCtx="true" scadeName="MTC_guard" scadeType="bool" targetName="tr_1_clock_WAITING_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+                <NodeInlining instName="26" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS16_MTC_OBS">
+                  <Probe clockVal="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_7_MTC_ALL1_Computing_Model_PATHS16_MTC_OBS_26_Computing_Model_State_Machine_Extend_Gear_WAITING_DOWN_1_MTC_INST_26" targetType="Result_MTC"/>
+                  <InitOp/>
+                  <PreOp/>
+                  <InitOp/>
+                  <ActivateEveryDefault>
+                    <Condition/>
+                    <NodeInstance refName="LATCHALL04_MTC" scadeName="MTC::LATCHALL04">
+                      <OutCtxVar targetName="Context_LATCHALL04_MTC_Computing_Model_PATHS16_MTC_OBS_26_Computing_Model_State_Machine_Extend_Gear_WAITING_DOWN_1_MTC_INST_26"/>
+                    </NodeInstance>
+                    <Default/>
+                  </ActivateEveryDefault>
+                </NodeInlining>
+              </NodeInlining>
+              <NodeInlining instName="36" scadeName="MTCEx::MTC_Observers::TRANSITION_MTC_OBS">
+                <Probe clockVal="kcg_true" clockVar="tr_1_clock_WAITING_DOWN_State_Machine_Extend_Gear" inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="MTC_ALL1_TRANSITION_MTC_OBS_36" targetType="Result_MTC"/>
+                <ActivateEveryDefault>
+                  <Condition/>
+                  <NodeInstance refName="LATCHALL01_MTC" scadeName="MTC::LATCHALL01">
+                    <OutCtxVar targetName="Context_LATCHALL01_MTC_TRANSITION_MTC_OBS_36"/>
+                  </NodeInstance>
+                  <Default/>
+                </ActivateEveryDefault>
+              </NodeInlining>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_WAITING_DOWN_INTERRUPTION_DOWN_1_WAITING_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <ActiveState inCtx="true" targetName="_95_State_Machine_Extend_Gear_state_act"/>
+        <SelectedState inCtx="true" targetName="_94_State_Machine_Extend_Gear_state_sel"/>
+        <NextState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_state_nxt"/>
+        <ResetActiveState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_reset_act"/>
+      </Automaton>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS17_MTC_OBS">
+        <Probe inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_8_MTC_ALL1_Computing_Model_PATHS17_MTC_OBS_1" targetType="Result_MTC"/>
+        <ActivateEveryDefault>
+          <Condition/>
+          <NodeInstance refName="LATCHALL03_MTC" scadeName="MTC::LATCHALL03">
+            <OutCtxVar targetName="_23_Context_LATCHALL03_MTC_Computing_Model_PATHS17_MTC_OBS_1"/>
+          </NodeInstance>
+          <Default/>
+        </ActivateEveryDefault>
+      </NodeInlining>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS18_MTC_OBS">
+        <Probe inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_9_MTC_ALL1_Computing_Model_PATHS18_MTC_OBS_1" targetType="Result_MTC"/>
+        <ActivateEveryDefault>
+          <Condition/>
+          <NodeInstance refName="LATCHALL03_MTC" scadeName="MTC::LATCHALL03">
+            <OutCtxVar targetName="_22_Context_LATCHALL03_MTC_Computing_Model_PATHS18_MTC_OBS_1"/>
+          </NodeInstance>
+          <Default/>
+        </ActivateEveryDefault>
+      </NodeInlining>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS19_MTC_OBS">
+        <Probe inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_10_MTC_ALL1_Computing_Model_PATHS19_MTC_OBS_1" targetType="Result_MTC"/>
+        <ActivateEveryDefault>
+          <Condition/>
+          <NodeInstance refName="LATCHALL03_MTC" scadeName="MTC::LATCHALL03">
+            <OutCtxVar targetName="_21_Context_LATCHALL03_MTC_Computing_Model_PATHS19_MTC_OBS_1"/>
+          </NodeInstance>
+          <Default/>
+        </ActivateEveryDefault>
+      </NodeInlining>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS20_MTC_OBS">
+        <Probe inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_11_MTC_ALL1_Computing_Model_PATHS20_MTC_OBS_1" targetType="Result_MTC"/>
+        <ActivateEveryDefault>
+          <Condition/>
+          <NodeInstance refName="LATCHALL03_MTC" scadeName="MTC::LATCHALL03">
+            <OutCtxVar targetName="_20_Context_LATCHALL03_MTC_Computing_Model_PATHS20_MTC_OBS_1"/>
+          </NodeInstance>
+          <Default/>
+        </ActivateEveryDefault>
+      </NodeInlining>
+      <NodeInlining instName="1" scadeName="MTCEx::MTC_Observers::Computing_Model_PATHS21_MTC_OBS">
+        <Probe inCtx="true" scadeName="MTC_ALL1" scadeType="MTC::Result" targetName="_12_MTC_ALL1_Computing_Model_PATHS21_MTC_OBS_1" targetType="Result_MTC"/>
+        <ActivateEveryDefault>
+          <Condition/>
+          <NodeInstance refName="LATCHALL03_MTC" scadeName="MTC::LATCHALL03">
+            <OutCtxVar targetName="Context_LATCHALL03_MTC_Computing_Model_PATHS21_MTC_OBS_1"/>
+          </NodeInstance>
+          <Default/>
+        </ActivateEveryDefault>
+      </NodeInlining>
+      <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init13" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init14" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init15" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init16" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init17" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init18" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init19" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS2_MTC_OBS_22_Computing_Model_State_Machine_Extend_Gear_GEN_EV_ON_1_MTC_INST_22" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS3_MTC_OBS_23_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_2_MTC_INST_23" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS4_MTC_OBS_21_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_2_MTC_INST_21" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS5_MTC_OBS_19_Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_ON_1_MTC_INST_19" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS6_MTC_OBS_20_Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_2_MTC_INST_20" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS8_MTC_OBS_24_Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_2_MTC_INST_24" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS15_MTC_OBS_25_Computing_Model_State_Machine_Extend_Gear_WAITING_TO_UP_1_MTC_INST_25" targetType="kcg_int32"/>
+      <Memory inCtx="true" targetName="v3_Computing_Model_PATHS16_MTC_OBS_26_Computing_Model_State_Machine_Extend_Gear_WAITING_DOWN_1_MTC_INST_26" targetType="kcg_int32"/>
+      <Clock clockVal="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_RETRACTED_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_GEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_OPEN_EV_ON_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_EXTEND_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_EXTEND_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_CLOSE_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_OPEN_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_EXTENDED_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_GENERAL_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_OPEN_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_CLOSE_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_true" clockVar="tr_2_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_1_clock_2_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_2_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_2_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_CLOSE_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="kcg_false" clockVar="tr_1_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" inCtx="true" targetName="tr_2_clock_RETRACT_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_RETRAIT_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_WAITING_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear" clockVar="_94_State_Machine_Extend_Gear_state_sel" inCtx="true" targetName="tr_1_clock_WAITING_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+      <Clock inCtx="true" targetName="_94_State_Machine_Extend_Gear_state_sel" targetType="SSM_ST_State_Machine_Extend_Gear"/>
+      <Clock inCtx="true" targetName="_95_State_Machine_Extend_Gear_state_act" targetType="SSM_ST_State_Machine_Extend_Gear"/>
+      <OutCtxType targetName="outC_Computing_Model"/>
+      <InCtxType targetName="inC_Computing_Model"/>
+    </RootNode>
+    <Package scadeName="digital"/>
+    <Package scadeName="truthtables">
+      <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+        <EnumVal scadeName="T" targetName="T_truthtables"/>
+        <EnumVal scadeName="F" targetName="F_truthtables"/>
+        <EnumVal scadeName="X" targetName="X_truthtables"/>
+      </EnumType>
+    </Package>
+    <Package scadeName="MTC">
+      <ImportedType scadeName="Result" targetInitializationFct="Result_MTC_init" targetName="Result_MTC"/>
+      <NoExpNode headerFile="LATCHALL01_MTC.h" imported="true" scadeName="LATCHALL01" targetCycleFct="LATCHALL01_MTC" targetInitFct="LATCHALL01_MTC_reset" targetInitializationFct="LATCHALL01_MTC_init">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="Output1" scadeType="MTC::Result" targetName="Output1" targetType="Result_MTC"/>
+        <OutCtxType targetName="outC_LATCHALL01_MTC"/>
+      </NoExpNode>
+      <NoExpNode headerFile="LATCHALL02_MTC.h" imported="true" scadeName="LATCHALL02" targetCycleFct="LATCHALL02_MTC" targetInitFct="LATCHALL02_MTC_reset" targetInitializationFct="LATCHALL02_MTC_init">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="Input2" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="Output1" scadeType="MTC::Result" targetName="Output1" targetType="Result_MTC"/>
+        <OutCtxType targetName="outC_LATCHALL02_MTC"/>
+      </NoExpNode>
+      <NoExpNode headerFile="LATCHALL03_MTC.h" imported="true" scadeName="LATCHALL03" targetCycleFct="LATCHALL03_MTC" targetInitFct="LATCHALL03_MTC_reset" targetInitializationFct="LATCHALL03_MTC_init">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="Input2" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="bool" targetName="Input3" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="Output1" scadeType="MTC::Result" targetName="Output1" targetType="Result_MTC"/>
+        <OutCtxType targetName="outC_LATCHALL03_MTC"/>
+      </NoExpNode>
+      <NoExpNode headerFile="LATCHALL04_MTC.h" imported="true" scadeName="LATCHALL04" targetCycleFct="LATCHALL04_MTC" targetInitFct="LATCHALL04_MTC_reset" targetInitializationFct="LATCHALL04_MTC_init">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="Input2" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="bool" targetName="Input3" targetType="kcg_bool"/>
+        <Input scadeName="Input4" scadeType="bool" targetName="Input4" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="Output1" scadeType="MTC::Result" targetName="Output1" targetType="Result_MTC"/>
+        <OutCtxType targetName="outC_LATCHALL04_MTC"/>
+      </NoExpNode>
+    </Package>
+    <Package scadeName="MTCEx">
+      <Package scadeName="MTC_Instrumenters">
+        <ExpNode scadeName="Computing_Model_MTC_general_EV_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_close_EV_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_open_EV_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_retract_EV_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_extend_EV_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_gears_Locked_Down_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_MTC_gears_Maneuvring_def_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_RETRACTED_UP_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_GEN_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_ON_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_OFF_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_EXTEND_EV_OFF_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_OFF_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_EXTENDED_DOWN_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_OFF1_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_OFF1_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_2_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_OPEN_EV_ON1_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_CLOSE_EV_ON1_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_RETRACT_EV_ON_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_2_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_RETRAIT_EV_OFF_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_GENERAL_EV_OFF1_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_INTERRUPTION_TO_UP_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_INTERRUPTION_DOWN_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_WAITING_TO_UP_1_MTC_INST"/>
+        <ExpNode scadeName="Computing_Model_State_Machine_Extend_Gear_WAITING_DOWN_1_MTC_INST"/>
+      </Package>
+      <Package scadeName="MTC_Observers">
+        <ExpNode scadeName="STATE_MTC_OBS"/>
+        <ExpNode scadeName="TRANSITION_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS1_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS2_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS3_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS4_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS5_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS6_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS7_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS8_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS9_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS10_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS11_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS12_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS13_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS14_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS15_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS16_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS17_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS18_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS19_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS20_MTC_OBS"/>
+        <ExpNode scadeName="Computing_Model_PATHS21_MTC_OBS"/>
+      </Package>
+    </Package>
+    <Package scadeName="linear"/>
+    <Package scadeName="filters"/>
+    <Package scadeName="vect"/>
+    <Package scadeName="math"/>
+    <Package scadeName="mathext">
+      <Package scadeName="mathextimpl"/>
+    </Package>
+    <Package scadeName="pwlinear"/>
+    <Package scadeName="lut"/>
+    <Package scadeName="verif"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

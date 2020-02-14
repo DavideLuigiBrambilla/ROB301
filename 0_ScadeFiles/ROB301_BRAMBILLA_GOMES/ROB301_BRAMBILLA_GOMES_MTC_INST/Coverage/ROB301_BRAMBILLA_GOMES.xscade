@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Open>
+			<package>
+				<PackageRef name="MTC"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/ffa5/53D8/778/5e3d88053602"/>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="MTCEx"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/ffa6/53D8/778/5e3d88056ae3"/>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="MTCEx::MTC_Instrumenters"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/ffa7/53D8/778/5e3d88057944"/>
+			</pragmas>
+		</Open>
+		<Open>
+			<package>
+				<PackageRef name="MTCEx::MTC_Observers"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/ffa8/53D8/778/5e3d88052ac1"/>
+			</pragmas>
+		</Open>
+	</declarations>
+</File>

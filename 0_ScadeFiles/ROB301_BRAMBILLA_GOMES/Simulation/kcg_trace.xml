@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Simulation/scade_model_without_unused.scade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="debug" value="#on#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/Simulation"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="Computing_Model"/>
+    <Option name="auth" value="#off#"/>
+    <RootNode headerFile="Computing_Model.h" scadeName="Computing_Model" targetCycleFct="Computing_Model" targetInitFct="Computing_Model_reset" targetInitializationFct="Computing_Model_init">
+      <Input inCtx="true" scadeName="handle" scadeType="bool" targetName="handle" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_front" scadeType="bool" targetName="gear_Extended_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_right" scadeType="bool" targetName="gear_Extended_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Extended_left" scadeType="bool" targetName="gear_Extended_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_front" scadeType="bool" targetName="gear_Retracted_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_right" scadeType="bool" targetName="gear_Retracted_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Retracted_left" scadeType="bool" targetName="gear_Retracted_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_front" scadeType="bool" targetName="gear_Shock_Absorber_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_right" scadeType="bool" targetName="gear_Shock_Absorber_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="gear_Shock_Absorber_left" scadeType="bool" targetName="gear_Shock_Absorber_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_front" scadeType="bool" targetName="door_Closed_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_right" scadeType="bool" targetName="door_Closed_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Closed_left" scadeType="bool" targetName="door_Closed_left" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_front" scadeType="bool" targetName="door_Open_front" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_right" scadeType="bool" targetName="door_Open_right" targetType="kcg_bool"/>
+      <Input inCtx="true" scadeName="door_Open_left" scadeType="bool" targetName="door_Open_left" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="general_EV" scadeType="bool" targetName="general_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="close_EV" scadeType="bool" targetName="close_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="open_EV" scadeType="bool" targetName="open_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="retract_EV" scadeType="bool" targetName="retract_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="extend_EV" scadeType="bool" targetName="extend_EV" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Locked_Down" scadeType="bool" targetName="gears_Locked_Down" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="gears_Maneuvring" scadeType="bool" targetName="gears_Maneuvring" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="all_gears_extended" scadeType="bool" targetName="all_gears_extended" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="all_shock_absorber_false" scadeType="bool" targetName="all_shock_absorber_false" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="all_doors_closed" scadeType="bool" targetName="all_doors_closed" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="all_doors_open" scadeType="bool" targetName="all_doors_open" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="all_gears_retracted" scadeType="bool" targetName="all_gears_retracted" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L140" scadeType="bool" targetName="_L140" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L139" scadeType="bool" targetName="_L139" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L138" scadeType="bool" targetName="_L138" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L137" scadeType="bool" targetName="_L137" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L136" scadeType="bool" targetName="_L136" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L135" scadeType="bool" targetName="_L135" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L134" scadeType="bool" targetName="_L134" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L133" scadeType="bool" targetName="_L133" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L132" scadeType="bool" targetName="_L132" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L131" scadeType="bool" targetName="_L131" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L130" scadeType="bool" targetName="_L130" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L129" scadeType="bool" targetName="_L129" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L127" scadeType="bool" targetName="_L127" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L126" scadeType="bool" targetName="_L126" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L125" scadeType="bool" targetName="_L125" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L124" scadeType="bool" targetName="_L124" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L123" scadeType="bool" targetName="_L123" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L122" scadeType="bool" targetName="_L122" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L121" scadeType="bool" targetName="_L121" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L120" scadeType="bool" targetName="_L120" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L119" scadeType="bool" targetName="_L119" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L118" scadeType="bool" targetName="_L118" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L105" scadeType="bool" targetName="_L105" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L100" scadeType="bool" targetName="_L100" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L99" scadeType="bool" targetName="_L99" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L98" scadeType="bool" targetName="_L98" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L96" scadeType="bool" targetName="_L96" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L95" scadeType="bool" targetName="_L95" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L94" scadeType="bool" targetName="_L94" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L92" scadeType="bool" targetName="_L92" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L34" scadeType="bool" targetName="_L34" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L33" scadeType="bool" targetName="_L33" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L91" scadeType="bool" targetName="_L91" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L62" scadeType="bool" targetName="_L62" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L61" scadeType="bool" targetName="_L61" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L60" scadeType="bool" targetName="_L60" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L53" scadeType="bool" targetName="_L53" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L52" scadeType="bool" targetName="_L52" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L51" scadeType="bool" targetName="_L51" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L44" scadeType="bool" targetName="_L44" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L43" scadeType="bool" targetName="_L43" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L42" scadeType="bool" targetName="_L42" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L26" scadeType="bool" targetName="_L26" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L25" scadeType="bool" targetName="_L25" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L24" scadeType="bool" targetName="_L24" targetType="kcg_bool"/>
+      <Automaton scadeName="State_Machine_Extend_Gear" targetStatesType="SSM_ST_State_Machine_Extend_Gear" targetTransitionsType="SSM_TR_State_Machine_Extend_Gear">
+        <State scadeName="RETRACTED_UP" targetName="SSM_st_RETRACTED_UP_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="GEN_EV_ON" targetName="SSM_TR_RETRACTED_UP_GEN_EV_ON_1_RETRACTED_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GEN_EV_ON" targetName="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_GEN_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_GEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="22">
+                <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_22_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_GEN_EV_ON_OPEN_EV_ON_1_GEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON" targetName="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_OPEN_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_OPEN_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_OPEN_EV_ON_WAITING_TO_UP_1_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTEND_EV_ON" targetName="SSM_TR_OPEN_EV_ON_EXTEND_EV_ON_2_OPEN_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_ON" targetName="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_EXTEND_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_EXTEND_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_EXTEND_EV_ON_WAITING_TO_UP_1_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTEND_EV_OFF" targetName="SSM_TR_EXTEND_EV_ON_EXTEND_EV_OFF_2_EXTEND_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTEND_EV_OFF" targetName="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_EXTEND_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_EXTEND_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_EXTEND_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_EXTEND_EV_OFF_INTERRUPTION_TO_UP_1_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF" targetName="SSM_TR_EXTEND_EV_OFF_OPEN_EV_OFF_2_EXTEND_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON" targetName="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_CLOSE_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_CLOSE_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_TO_UP" targetName="SSM_TR_CLOSE_EV_ON_WAITING_TO_UP_1_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF" targetName="SSM_TR_CLOSE_EV_ON_CLOSE_EV_OFF_2_CLOSE_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF" targetName="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_CLOSE_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3_CLOSE_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_CLOSE_EV_OFF_INTERRUPTION_TO_UP_1_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="23">
+                <Init inCtx="true" targetName="init1" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_23_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF" targetName="SSM_TR_CLOSE_EV_OFF_GENERAL_EV_OFF_2_CLOSE_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF" targetName="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_OPEN_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_OPEN_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_OPEN_EV_OFF_INTERRUPTION_TO_UP_1_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="21">
+                <Init inCtx="true" targetName="init2" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_21_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON" targetName="SSM_TR_OPEN_EV_OFF_CLOSE_EV_ON_2_OPEN_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF" targetName="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_GENERAL_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_GENERAL_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="EXTENDED_DOWN" targetName="SSM_TR_GENERAL_EV_OFF_EXTENDED_DOWN_1_GENERAL_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="EXTENDED_DOWN" targetName="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_EXTENDED_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_EXTENDED_DOWN_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3_EXTENDED_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="GENERAL_EV_ON" targetName="SSM_TR_EXTENDED_DOWN_GENERAL_EV_ON_1_EXTENDED_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_ON" targetName="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_GENERAL_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_GENERAL_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="19">
+                <Init inCtx="true" targetName="init3" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_19_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_GENERAL_EV_ON_OPEN_EV_ON1_1_GENERAL_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_OFF1" targetName="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_OPEN_EV_OFF1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_OPEN_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_OPEN_EV_OFF1_INTERRUPTION_DOWN_1_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="20">
+                <Init inCtx="true" targetName="init4" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_20_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="CLOSE_EV_ON1" targetName="SSM_TR_OPEN_EV_OFF1_CLOSE_EV_ON1_2_OPEN_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_OFF1" targetName="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_CLOSE_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_CLOSE_EV_OFF1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_CLOSE_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_CLOSE_EV_OFF1_INTERRUPTION_DOWN_1_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Action>
+              <Times instName="24">
+                <Init inCtx="true" targetName="init5" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_24_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="GENERAL_EV_OFF1" targetName="SSM_TR_CLOSE_EV_OFF1_GENERAL_EV_OFF1_2_CLOSE_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="OPEN_EV_ON1" targetName="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_OPEN_EV_ON1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_OPEN_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_OPEN_EV_ON1_WAITING_DOWN_1_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Fork priority="1">
+              <Condition/>
+              <Transition kind="strong" scadeDest="RETRACT_EV_ON" targetName="SSM_TR_OPEN_EV_ON1_RETRACT_EV_ON_1_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+            <Fork priority="2">
+              <Condition/>
+              <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_OPEN_EV_ON1_OPEN_EV_OFF1_2_2_OPEN_EV_ON1_State_Machine_Extend_Gear"/>
+            </Fork>
+          </Fork>
+        </State>
+        <State scadeName="CLOSE_EV_ON1" targetName="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_CLOSE_EV_ON1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_CLOSE_EV_ON1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_CLOSE_EV_ON1_WAITING_DOWN_1_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="CLOSE_EV_OFF1" targetName="SSM_TR_CLOSE_EV_ON1_CLOSE_EV_OFF1_2_CLOSE_EV_ON1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRACT_EV_ON" targetName="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_RETRACT_EV_ON_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_RETRACT_EV_ON_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="WAITING_DOWN" targetName="SSM_TR_RETRACT_EV_ON_WAITING_DOWN_1_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="RETRAIT_EV_OFF" targetName="SSM_TR_RETRACT_EV_ON_RETRAIT_EV_OFF_2_RETRACT_EV_ON_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="RETRAIT_EV_OFF" targetName="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_RETRAIT_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_RETRAIT_EV_OFF_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_RETRAIT_EV_OFF_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_RETRAIT_EV_OFF_INTERRUPTION_DOWN_1_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_OFF1" targetName="SSM_TR_RETRAIT_EV_OFF_OPEN_EV_OFF1_2_RETRAIT_EV_OFF_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="GENERAL_EV_OFF1" targetName="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_GENERAL_EV_OFF1_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_GENERAL_EV_OFF1_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="RETRACTED_UP" targetName="SSM_TR_GENERAL_EV_OFF1_RETRACTED_UP_1_GENERAL_EV_OFF1_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_TO_UP" targetName="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3_INTERRUPTION_TO_UP_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON1" targetName="SSM_TR_INTERRUPTION_TO_UP_OPEN_EV_ON1_1_INTERRUPTION_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="INTERRUPTION_DOWN" targetName="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear">
+          <Local clockVal="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L1" scadeType="bool" targetName="_L1_INTERRUPTION_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_INTERRUPTION_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_INTERRUPTION_DOWN_State_Machine_Extend_Gear" clockVar="_10_State_Machine_Extend_Gear_state_act" inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3_INTERRUPTION_DOWN_State_Machine_Extend_Gear" targetType="kcg_bool"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="strong" scadeDest="OPEN_EV_ON" targetName="SSM_TR_INTERRUPTION_DOWN_OPEN_EV_ON_1_INTERRUPTION_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_TO_UP" targetName="SSM_st_WAITING_TO_UP_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="25">
+                <Init inCtx="true" targetName="init6" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_25_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_TO_UP" targetName="SSM_TR_WAITING_TO_UP_INTERRUPTION_TO_UP_1_WAITING_TO_UP_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <State scadeName="WAITING_DOWN" targetName="SSM_st_WAITING_DOWN_State_Machine_Extend_Gear">
+          <Fork priority="1">
+            <Condition/>
+            <Action>
+              <Times instName="26">
+                <Init inCtx="true" targetName="init7" targetType="kcg_bool"/>
+                <Memory inCtx="true" targetName="v3_times_26_size" targetType="kcg_size"/>
+              </Times>
+            </Action>
+            <Transition kind="strong" scadeDest="INTERRUPTION_DOWN" targetName="SSM_TR_WAITING_DOWN_INTERRUPTION_DOWN_1_WAITING_DOWN_State_Machine_Extend_Gear"/>
+          </Fork>
+        </State>
+        <ActiveState inCtx="true" targetName="_10_State_Machine_Extend_Gear_state_act"/>
+        <SelectedState inCtx="true" targetName="_9_State_Machine_Extend_Gear_state_sel"/>
+        <NextState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_state_nxt"/>
+        <ResetActiveState inCtx="true" mem="true" targetName="State_Machine_Extend_Gear_reset_act"/>
+        <ResetNextState inCtx="true" mem="true" targetName="_8_State_Machine_Extend_Gear_reset_nxt"/>
+        <StrongTransition inCtx="true" targetName="State_Machine_Extend_Gear_fired_strong"/>
+        <WeakTransition inCtx="true" targetName="_11_State_Machine_Extend_Gear_fired"/>
+      </Automaton>
+      <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init1" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init2" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init3" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init4" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init5" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init6" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init7" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="v3_times_22_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_23_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_21_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_19_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_20_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_24_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_25_size" targetType="kcg_size"/>
+      <Memory inCtx="true" targetName="v3_times_26_size" targetType="kcg_size"/>
+      <Clock inCtx="true" targetName="_9_State_Machine_Extend_Gear_state_sel" targetType="SSM_ST_State_Machine_Extend_Gear"/>
+      <Clock inCtx="true" targetName="_10_State_Machine_Extend_Gear_state_act" targetType="SSM_ST_State_Machine_Extend_Gear"/>
+      <OutCtxType targetName="outC_Computing_Model"/>
+      <InCtxType targetName="inC_Computing_Model"/>
+    </RootNode>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

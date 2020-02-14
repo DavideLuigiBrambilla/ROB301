@@ -1,0 +1,45 @@
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** Command: kcg66.exe -config C:/Users/SI/Documents/0_ScadeFiles/ROB301_BRAMBILLA_GOMES/ROB301_BRAMBILLA_GOMES_MTC_INST/Coverage/Coverage/config.txt
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+
+#include "kcg_consts.h"
+#include "kcg_sensors.h"
+#include "LATCHALL04_MTC.h"
+
+/* MTC::LATCHALL04/ */
+void LATCHALL04_MTC(
+  /* Input1/ */
+  kcg_bool Input1,
+  /* Input2/ */
+  kcg_bool Input2,
+  /* Input3/ */
+  kcg_bool Input3,
+  /* Input4/ */
+  kcg_bool Input4,
+  outC_LATCHALL04_MTC *outC)
+{
+  /* The body of this function must be provided */
+
+}
+
+void LATCHALL04_MTC_init(outC_LATCHALL04_MTC *outC)
+{
+  /* The body of this function must be provided */
+
+}
+
+
+void LATCHALL04_MTC_reset(outC_LATCHALL04_MTC *outC)
+{
+  /* The body of this function must be provided */
+
+}
+
+
+
+/* $********** SCADE Suite KCG 32-bit 6.6 (build i15) ***********
+** LATCHALL04_MTC.dc
+** Generation date: 2020-02-07T16:54:06
+*************************************************************$ */
+

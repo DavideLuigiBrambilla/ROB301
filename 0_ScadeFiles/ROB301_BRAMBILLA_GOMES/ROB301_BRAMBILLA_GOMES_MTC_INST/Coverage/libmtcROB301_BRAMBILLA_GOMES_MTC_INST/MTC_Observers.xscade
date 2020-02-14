@@ -1,0 +1,6417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:mtc="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1" name="MTC_Observers">
+	<declarations>
+		<Operator kind="node" name="STATE_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f730/53D8/778/5e3d88052619" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(Activated)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f731/53D8/778/5e3d880537bb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(No Transition Fired)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd1c/53D8/778/5e3d88057cad" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f732/53D8/778/5e3d88055fb5"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f733/53D8/778/5e3d88056392"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f72e/53D8/778/5e3d88052658" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(State)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_STATE_MTC_OBS" landscape="false" oid="!ed/f72f/53D8/778/5e3d88059f1">
+							<presentationElements>
+								<FlowTE presentable="!ed/f733/53D8/778/5e3d88056392"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="Computing_Model/State_Machine_Extend_Gear:WAITING_DOWN"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="TRANSITION_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f73b/53D8/778/5e3d88057dc7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(Fired)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd1d/53D8/778/5e3d88053bcf" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f73c/53D8/778/5e3d88056c0b"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL01 every MTC_INSTRU default (0))(MTC_CC_3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL01 every MTC_INSTRU default (0))(MTC_CC_3) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL01"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f73d/53D8/778/5e3d88056e48"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f739/53D8/778/5e3d8805675b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(Transition)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_TRANSITION_MTC_OBS" landscape="false" oid="!ed/f73a/53D8/778/5e3d88054d52">
+							<presentationElements>
+								<FlowTE presentable="!ed/f73d/53D8/778/5e3d88056e48"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="Computing_Model/State_Machine_Extend_Gear:WAITING_DOWN:&lt;1&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS1_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f74e/53D8/778/5e3d88051234" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#12 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f74f/53D8/778/5e3d8805585d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#12 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd1e/53D8/778/5e3d8805bc7" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f750/53D8/778/5e3d88051ed9"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f751/53D8/778/5e3d8805536e"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f74c/53D8/778/5e3d8805593d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS1_MTC_OBS" landscape="false" oid="!ed/f74d/53D8/778/5e3d88052d11">
+							<presentationElements>
+								<FlowTE presentable="!ed/f751/53D8/778/5e3d8805536e"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS2_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f76b/53D8/778/5e3d8805558e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f76c/53D8/778/5e3d88055349"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd1f/53D8/778/5e3d88054736" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f76d/53D8/778/5e3d880527d6"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f76e/53D8/778/5e3d88053123"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f76f/53D8/778/5e3d88056fcf"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f774/53D8/778/5e3d88056c4d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f776/53D8/778/5e3d88055cab" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f778/53D8/778/5e3d88057517" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f77a/53D8/778/5e3d8805177d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f77c/53D8/778/5e3d88054fd"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f770/53D8/778/5e3d880515c8"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f771/53D8/778/5e3d880568d1"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f772/53D8/778/5e3d88052005"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f775/53D8/778/5e3d880554cf" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f777/53D8/778/5e3d8805660" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f779/53D8/778/5e3d8805165d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f77b/53D8/778/5e3d88051db4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f77d/53D8/778/5e3d88055d45"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f769/53D8/778/5e3d88051cab" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#22)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f76a/53D8/778/5e3d8805348e">
+							<presentationElements>
+								<FlowTE presentable="!ed/f770/53D8/778/5e3d880515c8"/>
+								<FlowTE presentable="!ed/f771/53D8/778/5e3d880568d1"/>
+								<FlowTE presentable="!ed/f772/53D8/778/5e3d88052005"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f773/53D8/778/5e3d88052bf0">
+							<presentationElements>
+								<FlowTE presentable="!ed/f775/53D8/778/5e3d880554cf"/>
+								<FlowTE presentable="!ed/f777/53D8/778/5e3d8805660"/>
+								<FlowTE presentable="!ed/f779/53D8/778/5e3d8805165d"/>
+								<FlowTE presentable="!ed/f77b/53D8/778/5e3d88051db4"/>
+								<FlowTE presentable="!ed/f77d/53D8/778/5e3d88055d45"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS3_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f826/53D8/778/5e3d88056368"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f827/53D8/778/5e3d8805474f"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd20/53D8/778/5e3d88055898" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f828/53D8/778/5e3d88051d3"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f829/53D8/778/5e3d8805148e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f82a/53D8/778/5e3d880576ba"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f82f/53D8/778/5e3d880513a7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f831/53D8/778/5e3d88054c4e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f833/53D8/778/5e3d880531f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f835/53D8/778/5e3d88052bb5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f837/53D8/778/5e3d88053ca2"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f82b/53D8/778/5e3d88051d91"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f82c/53D8/778/5e3d88052baa"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f82d/53D8/778/5e3d88057970"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f830/53D8/778/5e3d88056c19" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f832/53D8/778/5e3d88053e42" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f834/53D8/778/5e3d88052d0a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f836/53D8/778/5e3d8805489c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f838/53D8/778/5e3d8805b"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f824/53D8/778/5e3d880559d6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#23)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f825/53D8/778/5e3d880588b">
+							<presentationElements>
+								<FlowTE presentable="!ed/f82b/53D8/778/5e3d88051d91"/>
+								<FlowTE presentable="!ed/f82c/53D8/778/5e3d88052baa"/>
+								<FlowTE presentable="!ed/f82d/53D8/778/5e3d88057970"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f82e/53D8/778/5e3d88056817">
+							<presentationElements>
+								<FlowTE presentable="!ed/f830/53D8/778/5e3d88056c19"/>
+								<FlowTE presentable="!ed/f832/53D8/778/5e3d88053e42"/>
+								<FlowTE presentable="!ed/f834/53D8/778/5e3d88052d0a"/>
+								<FlowTE presentable="!ed/f836/53D8/778/5e3d8805489c"/>
+								<FlowTE presentable="!ed/f838/53D8/778/5e3d8805b"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS4_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f861/53D8/778/5e3d88057295"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f862/53D8/778/5e3d880511e0"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd21/53D8/778/5e3d88054853" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f863/53D8/778/5e3d880577e6"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f864/53D8/778/5e3d880536ce"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f865/53D8/778/5e3d8805311a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f86a/53D8/778/5e3d880536bd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f86c/53D8/778/5e3d880516b9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f86e/53D8/778/5e3d88057e1b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f870/53D8/778/5e3d880568ca" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f872/53D8/778/5e3d88055b9b"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f866/53D8/778/5e3d88053f5c"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f867/53D8/778/5e3d88057690"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f868/53D8/778/5e3d88055eba"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f86b/53D8/778/5e3d880529b4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f86d/53D8/778/5e3d88052dda" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f86f/53D8/778/5e3d88057bda" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f871/53D8/778/5e3d88051a60" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f873/53D8/778/5e3d88051861"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f85f/53D8/778/5e3d880540cb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#21)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f860/53D8/778/5e3d880592d">
+							<presentationElements>
+								<FlowTE presentable="!ed/f866/53D8/778/5e3d88053f5c"/>
+								<FlowTE presentable="!ed/f867/53D8/778/5e3d88057690"/>
+								<FlowTE presentable="!ed/f868/53D8/778/5e3d88055eba"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f869/53D8/778/5e3d880521dd">
+							<presentationElements>
+								<FlowTE presentable="!ed/f86b/53D8/778/5e3d880529b4"/>
+								<FlowTE presentable="!ed/f86d/53D8/778/5e3d88052dda"/>
+								<FlowTE presentable="!ed/f86f/53D8/778/5e3d88057bda"/>
+								<FlowTE presentable="!ed/f871/53D8/778/5e3d88051a60"/>
+								<FlowTE presentable="!ed/f873/53D8/778/5e3d88051861"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS5_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8bc/53D8/778/5e3d8805f21"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8bd/53D8/778/5e3d88052f02"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd22/53D8/778/5e3d8805a9" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8be/53D8/778/5e3d8805147c"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8bf/53D8/778/5e3d8805602c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8c0/53D8/778/5e3d88056678"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8c5/53D8/778/5e3d8805a9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8c7/53D8/778/5e3d88054fa9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8c9/53D8/778/5e3d88051194" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8cb/53D8/778/5e3d88056b66" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8cd/53D8/778/5e3d88054b98"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8c1/53D8/778/5e3d88053e6d"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8c2/53D8/778/5e3d88054132"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8c3/53D8/778/5e3d88057765"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8c6/53D8/778/5e3d88053f82" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8c8/53D8/778/5e3d880554cb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8ca/53D8/778/5e3d88056fe3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8cc/53D8/778/5e3d88057839" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8ce/53D8/778/5e3d88053c23"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f8ba/53D8/778/5e3d8805cec" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#19)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f8bb/53D8/778/5e3d88054c87">
+							<presentationElements>
+								<FlowTE presentable="!ed/f8c1/53D8/778/5e3d88053e6d"/>
+								<FlowTE presentable="!ed/f8c2/53D8/778/5e3d88054132"/>
+								<FlowTE presentable="!ed/f8c3/53D8/778/5e3d88057765"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f8c4/53D8/778/5e3d88053df9">
+							<presentationElements>
+								<FlowTE presentable="!ed/f8c6/53D8/778/5e3d88053f82"/>
+								<FlowTE presentable="!ed/f8c8/53D8/778/5e3d880554cb"/>
+								<FlowTE presentable="!ed/f8ca/53D8/778/5e3d88056fe3"/>
+								<FlowTE presentable="!ed/f8cc/53D8/778/5e3d88057839"/>
+								<FlowTE presentable="!ed/f8ce/53D8/778/5e3d88053c23"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS6_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8ee/53D8/778/5e3d88052f2c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8ef/53D8/778/5e3d8805581f"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd23/53D8/778/5e3d88052784" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8f0/53D8/778/5e3d88056d8c"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8f1/53D8/778/5e3d8805763"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8f2/53D8/778/5e3d88054ab4"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8f7/53D8/778/5e3d8805c4c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8f9/53D8/778/5e3d880570e2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8fb/53D8/778/5e3d88057b7b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8fd/53D8/778/5e3d88053144" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f8ff/53D8/778/5e3d88053d70"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8f3/53D8/778/5e3d880530b1"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8f4/53D8/778/5e3d880579e"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8f5/53D8/778/5e3d88055e18"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8f8/53D8/778/5e3d88056bca" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8fa/53D8/778/5e3d88054414" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8fc/53D8/778/5e3d880578fd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f8fe/53D8/778/5e3d88056239" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f900/53D8/778/5e3d88052f33"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f8ec/53D8/778/5e3d880544ba" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#20)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f8ed/53D8/778/5e3d88051200">
+							<presentationElements>
+								<FlowTE presentable="!ed/f8f3/53D8/778/5e3d880530b1"/>
+								<FlowTE presentable="!ed/f8f4/53D8/778/5e3d880579e"/>
+								<FlowTE presentable="!ed/f8f5/53D8/778/5e3d88055e18"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f8f6/53D8/778/5e3d88052716">
+							<presentationElements>
+								<FlowTE presentable="!ed/f8f8/53D8/778/5e3d88056bca"/>
+								<FlowTE presentable="!ed/f8fa/53D8/778/5e3d88054414"/>
+								<FlowTE presentable="!ed/f8fc/53D8/778/5e3d880578fd"/>
+								<FlowTE presentable="!ed/f8fe/53D8/778/5e3d88056239"/>
+								<FlowTE presentable="!ed/f900/53D8/778/5e3d88052f33"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS7_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f912/53D8/778/5e3d880575a3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#19 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f913/53D8/778/5e3d8805e9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#19 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd24/53D8/778/5e3d88055011" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f914/53D8/778/5e3d88055de3"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f915/53D8/778/5e3d88055883"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f910/53D8/778/5e3d88052065" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS7_MTC_OBS" landscape="false" oid="!ed/f911/53D8/778/5e3d8805304c">
+							<presentationElements>
+								<FlowTE presentable="!ed/f915/53D8/778/5e3d88055883"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS8_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f934/53D8/778/5e3d8805700e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f935/53D8/778/5e3d8805277f"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd25/53D8/778/5e3d88051900" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f936/53D8/778/5e3d880556c0"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f937/53D8/778/5e3d88051daa"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f938/53D8/778/5e3d8805a9a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f93d/53D8/778/5e3d8805df0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f93f/53D8/778/5e3d88055a7a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f941/53D8/778/5e3d88056ec2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f943/53D8/778/5e3d88054a98" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f945/53D8/778/5e3d88052f4a"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f939/53D8/778/5e3d88057fb7"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f93a/53D8/778/5e3d880529c7"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f93b/53D8/778/5e3d880517d1"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f93e/53D8/778/5e3d88055db5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f940/53D8/778/5e3d88055d9f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f942/53D8/778/5e3d880516d4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f944/53D8/778/5e3d88053011" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f946/53D8/778/5e3d88054ce0"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f932/53D8/778/5e3d88056ef4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#24)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/f933/53D8/778/5e3d88053c3f">
+							<presentationElements>
+								<FlowTE presentable="!ed/f939/53D8/778/5e3d88057fb7"/>
+								<FlowTE presentable="!ed/f93a/53D8/778/5e3d880529c7"/>
+								<FlowTE presentable="!ed/f93b/53D8/778/5e3d880517d1"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/f93c/53D8/778/5e3d88052fb6">
+							<presentationElements>
+								<FlowTE presentable="!ed/f93e/53D8/778/5e3d88055db5"/>
+								<FlowTE presentable="!ed/f940/53D8/778/5e3d88055d9f"/>
+								<FlowTE presentable="!ed/f942/53D8/778/5e3d880516d4"/>
+								<FlowTE presentable="!ed/f944/53D8/778/5e3d88053011"/>
+								<FlowTE presentable="!ed/f946/53D8/778/5e3d88054ce0"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS9_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f958/53D8/778/5e3d880563a1" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#21 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f959/53D8/778/5e3d880534a4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#21 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd26/53D8/778/5e3d8805689e" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f95a/53D8/778/5e3d880574f8"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f95b/53D8/778/5e3d88057a54"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f956/53D8/778/5e3d88052492" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS9_MTC_OBS" landscape="false" oid="!ed/f957/53D8/778/5e3d880513c3">
+							<presentationElements>
+								<FlowTE presentable="!ed/f95b/53D8/778/5e3d88057a54"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS10_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f991/53D8/778/5e3d880562fb" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#15 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f992/53D8/778/5e3d880514b7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#15 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd27/53D8/778/5e3d880563f0" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f993/53D8/778/5e3d8805647"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f994/53D8/778/5e3d8805dfa"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f98f/53D8/778/5e3d880524cd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS10_MTC_OBS" landscape="false" oid="!ed/f990/53D8/778/5e3d88057f99">
+							<presentationElements>
+								<FlowTE presentable="!ed/f994/53D8/778/5e3d8805dfa"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS11_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9af/53D8/778/5e3d880573f7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#16 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9b0/53D8/778/5e3d880575e2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#16 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd28/53D8/778/5e3d88053723" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9b1/53D8/778/5e3d88056d3"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f9b2/53D8/778/5e3d88057f1a"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f9ad/53D8/778/5e3d88052244" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS11_MTC_OBS" landscape="false" oid="!ed/f9ae/53D8/778/5e3d88057422">
+							<presentationElements>
+								<FlowTE presentable="!ed/f9b2/53D8/778/5e3d88057f1a"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS12_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9dc/53D8/778/5e3d8805711a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#20 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9dd/53D8/778/5e3d88051838" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#20 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd29/53D8/778/5e3d88052301" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/f9de/53D8/778/5e3d8805457e"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/f9df/53D8/778/5e3d88053936"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/f9da/53D8/778/5e3d88053656" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS12_MTC_OBS" landscape="false" oid="!ed/f9db/53D8/778/5e3d88057514">
+							<presentationElements>
+								<FlowTE presentable="!ed/f9df/53D8/778/5e3d88053936"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS13_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa0a/53D8/778/5e3d88056a49" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#17 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa0b/53D8/778/5e3d88055b94" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#17 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2a/53D8/778/5e3d88055034" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa0c/53D8/778/5e3d88054d8d"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa0d/53D8/778/5e3d8805e07"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fa08/53D8/778/5e3d88052e58" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS13_MTC_OBS" landscape="false" oid="!ed/fa09/53D8/778/5e3d88052783">
+							<presentationElements>
+								<FlowTE presentable="!ed/fa0d/53D8/778/5e3d8805e07"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS14_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_1_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa35/53D8/778/5e3d8805397e" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#18 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa36/53D8/778/5e3d88057249" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#18 -&gt; &lt;guard&gt;)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2b/53D8/778/5e3d880552a5" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa37/53D8/778/5e3d88056685"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MT... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL02 every MTC_INSTRU default (0))(MTC_CC_1_T, MTC_CC_2_F) -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL02"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa38/53D8/778/5e3d88052dac"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fa33/53D8/778/5e3d88051ef3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(&lt;guard&gt;)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS14_MTC_OBS" landscape="false" oid="!ed/fa34/53D8/778/5e3d8805655">
+							<presentationElements>
+								<FlowTE presentable="!ed/fa38/53D8/778/5e3d88052dac"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="&lt;guard&gt;"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS15_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa8a/53D8/778/5e3d8805c43"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa8b/53D8/778/5e3d88055dff"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2c/53D8/778/5e3d880557e1" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa8c/53D8/778/5e3d8805753e"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa8d/53D8/778/5e3d8805521e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa8e/53D8/778/5e3d88053bd7"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa93/53D8/778/5e3d88055eb3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa95/53D8/778/5e3d8805111b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa97/53D8/778/5e3d88057bdf" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa99/53D8/778/5e3d88054d53" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fa9b/53D8/778/5e3d880515be"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa8f/53D8/778/5e3d880550b"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa90/53D8/778/5e3d88054003"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa91/53D8/778/5e3d8805e51"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa94/53D8/778/5e3d880511b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa96/53D8/778/5e3d880531a4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa98/53D8/778/5e3d8805159" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa9a/53D8/778/5e3d88057960" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fa9c/53D8/778/5e3d88052dc8"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fa88/53D8/778/5e3d88052f7b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#25)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/fa89/53D8/778/5e3d88053c26">
+							<presentationElements>
+								<FlowTE presentable="!ed/fa8f/53D8/778/5e3d880550b"/>
+								<FlowTE presentable="!ed/fa90/53D8/778/5e3d88054003"/>
+								<FlowTE presentable="!ed/fa91/53D8/778/5e3d8805e51"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/fa92/53D8/778/5e3d88051cfa">
+							<presentationElements>
+								<FlowTE presentable="!ed/fa94/53D8/778/5e3d880511b"/>
+								<FlowTE presentable="!ed/fa96/53D8/778/5e3d880531a4"/>
+								<FlowTE presentable="!ed/fa98/53D8/778/5e3d8805159"/>
+								<FlowTE presentable="!ed/fa9a/53D8/778/5e3d88057960"/>
+								<FlowTE presentable="!ed/fa9c/53D8/778/5e3d88052dc8"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS16_MTC_OBS">
+			<inputs>
+				<Variable name="n">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fab9/53D8/778/5e3d8805bec"/>
+					</pragmas>
+				</Variable>
+				<Variable name="c">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/faba/53D8/778/5e3d8805234d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2d/53D8/778/5e3d8805626f" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="o">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fabb/53D8/778/5e3d880568cd"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="v3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fabc/53D8/778/5e3d88053c18"/>
+					</pragmas>
+				</Variable>
+				<Variable name="v4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fabd/53D8/778/5e3d880542c7"/>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fac2/53D8/778/5e3d88055a71" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fac4/53D8/778/5e3d88054ec0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fac6/53D8/778/5e3d8805708f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fac8/53D8/778/5e3d880578d0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/faca/53D8/778/5e3d88057328"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- v4 = (n) -> (pre v3); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v4"/>
+					</lefts>
+					<right>
+						<!-- (n) -> (pre v3) -->
+						<InitOp>
+							<value>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="n"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</value>
+							<flow>
+								<ListExpression>
+									<items>
+										<!-- pre v3 -->
+										<PreOp>
+											<flow>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v3"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</flow>
+										</PreOp>
+									</items>
+								</ListExpression>
+							</flow>
+						</InitOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fabe/53D8/778/5e3d88052936"/>
+					</pragmas>
+				</Equation>
+				<!-- v3 = if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="v3"/>
+					</lefts>
+					<right>
+						<!-- if (v4 < 0) then (v4) else (if c then (v4 - 1) else (v4)) -->
+						<IfThenElseOp>
+							<if>
+								<!-- v4 < 0 -->
+								<BinaryOp operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v4"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<!-- if c then (v4 - 1) else (v4) -->
+										<IfThenElseOp>
+											<if>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="c"/>
+													</path>
+												</IdExpression>
+											</if>
+											<then>
+												<ListExpression>
+													<items>
+														<!-- v4 - 1 -->
+														<BinaryOp operator="-">
+															<operands>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="v4"/>
+																	</path>
+																</IdExpression>
+																<ConstValue value="1"/>
+															</operands>
+														</BinaryOp>
+													</items>
+												</ListExpression>
+											</then>
+											<else>
+												<ListExpression>
+													<items>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="v4"/>
+															</path>
+														</IdExpression>
+													</items>
+												</ListExpression>
+											</else>
+										</IfThenElseOp>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fabf/53D8/778/5e3d880551e3"/>
+					</pragmas>
+				</Equation>
+				<!-- o = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="o"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fac0/53D8/778/5e3d88052199"/>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_1 = c and v3 <> 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_1"/>
+					</lefts>
+					<right>
+						<!-- c and v3 <> 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 <> 0 -->
+								<BinaryOp operator="&lt;&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fac3/53D8/778/5e3d88055410" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>counting down</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_2 = c and v3 = 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_2"/>
+					</lefts>
+					<right>
+						<!-- c and v3 = 0 -->
+						<NAryOp operator="and">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="c"/>
+									</path>
+								</IdExpression>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fac5/53D8/778/5e3d880579fd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_3 =  not c and v3 = 0 and ((false) -> (true)); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_3"/>
+					</lefts>
+					<right>
+						<!--  not c and v3 = 0 and ((false) -> (true)) -->
+						<NAryOp operator="and">
+							<operands>
+								<!--  not c -->
+								<UnaryOp operator="not">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="c"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+								<!-- v3 = 0 -->
+								<BinaryOp operator="=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="v3"/>
+											</path>
+										</IdExpression>
+										<ConstValue value="0"/>
+									</operands>
+								</BinaryOp>
+								<!-- ((false) -> (true)) -->
+								<InitOp>
+									<value>
+										<ListExpression>
+											<items>
+												<ConstValue value="false"/>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<ConstValue value="true"/>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fac7/53D8/778/5e3d880556a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>not C since just hit</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_CC_4 = v4 < 0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_CC_4"/>
+					</lefts>
+					<right>
+						<!-- v4 < 0 -->
+						<BinaryOp operator="&lt;">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="v4"/>
+									</path>
+								</IdExpression>
+								<ConstValue value="0"/>
+							</operands>
+						</BinaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fac9/53D8/778/5e3d880575aa" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>over</comment>
+						</ed:Equation>
+					</pragmas>
+				</Equation>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL04 every MTC_INSTRU default (0))(MTC_CC_1, MTC_CC_2, MTC_C... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL04"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/facb/53D8/778/5e3d880572fe"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fab7/53D8/778/5e3d880526e2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS($times#26)</comment>
+					<diagrams>
+						<TextDiagram name="Implementation" landscape="false" oid="!ed/fab8/53D8/778/5e3d88054967">
+							<presentationElements>
+								<FlowTE presentable="!ed/fabe/53D8/778/5e3d88052936"/>
+								<FlowTE presentable="!ed/fabf/53D8/778/5e3d880551e3"/>
+								<FlowTE presentable="!ed/fac0/53D8/778/5e3d88052199"/>
+							</presentationElements>
+						</TextDiagram>
+						<TextDiagram name="Instrumentation" landscape="false" oid="!ed/fac1/53D8/778/5e3d88057c30">
+							<presentationElements>
+								<FlowTE presentable="!ed/fac3/53D8/778/5e3d88055410"/>
+								<FlowTE presentable="!ed/fac5/53D8/778/5e3d880579fd"/>
+								<FlowTE presentable="!ed/fac7/53D8/778/5e3d880556a"/>
+								<FlowTE presentable="!ed/fac9/53D8/778/5e3d880575aa"/>
+								<FlowTE presentable="!ed/facb/53D8/778/5e3d880572fe"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS17_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_81_A">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb3b/53D8/778/5e3d88051a2a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(all_gears_retracted)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_82_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb3c/53D8/778/5e3d88057a70" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#1 -&gt; all_gears_retracted)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_83_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb3d/53D8/778/5e3d88055868" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#1 -&gt; all_gears_retracted)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2e/53D8/778/5e3d8805742f" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb3e/53D8/778/5e3d88051e54"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_81_A, M... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_81_A, MTC_CC_82_T,... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL03"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_81_A"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_82_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_83_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fb3f/53D8/778/5e3d88055886"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fb39/53D8/778/5e3d880531e3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(all_gears_retracted)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS17_MTC_OBS" landscape="false" oid="!ed/fb3a/53D8/778/5e3d880578cc">
+							<presentationElements>
+								<FlowTE presentable="!ed/fb3f/53D8/778/5e3d88055886"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="all_gears_retracted"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS18_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_84_A">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb43/53D8/778/5e3d88054dd7" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(all_doors_open)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_85_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb44/53D8/778/5e3d88051d1c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#3 -&gt; all_doors_open)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_86_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb45/53D8/778/5e3d880523d2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#3 -&gt; all_doors_open)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd2f/53D8/778/5e3d88056a24" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb46/53D8/778/5e3d88055c51"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_84_A, M... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_84_A, MTC_CC_85_T,... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL03"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_84_A"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_85_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_86_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fb47/53D8/778/5e3d8805e5f"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fb41/53D8/778/5e3d88053b79" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(all_doors_open)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS18_MTC_OBS" landscape="false" oid="!ed/fb42/53D8/778/5e3d88055337">
+							<presentationElements>
+								<FlowTE presentable="!ed/fb47/53D8/778/5e3d8805e5f"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="all_doors_open"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS19_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_87_A">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb4b/53D8/778/5e3d880511d1" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(all_doors_closed)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_88_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb4c/53D8/778/5e3d88051db3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#6 -&gt; all_doors_closed)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_89_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb4d/53D8/778/5e3d880578fe" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#6 -&gt; all_doors_closed)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd30/53D8/778/5e3d8805858" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb4e/53D8/778/5e3d8805227a"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_87_A, M... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_87_A, MTC_CC_88_T,... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL03"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_87_A"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_88_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_89_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fb4f/53D8/778/5e3d8805b59"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fb49/53D8/778/5e3d88057a58" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(all_doors_closed)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS19_MTC_OBS" landscape="false" oid="!ed/fb4a/53D8/778/5e3d88055300">
+							<presentationElements>
+								<FlowTE presentable="!ed/fb4f/53D8/778/5e3d8805b59"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="all_doors_closed"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS20_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_90_A">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb53/53D8/778/5e3d88052dd" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(all_shock_absorber_false)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_91_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb54/53D8/778/5e3d88051e68" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#1 -&gt; all_shock_absorber_false)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_92_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb55/53D8/778/5e3d88057d3" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($not#1 -&gt; all_shock_absorber_false)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd31/53D8/778/5e3d88056875" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb56/53D8/778/5e3d88051da0"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_90_A, M... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_90_A, MTC_CC_91_T,... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL03"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_90_A"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_91_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_92_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fb57/53D8/778/5e3d88051383"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fb51/53D8/778/5e3d880562e9" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(all_shock_absorber_false)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS20_MTC_OBS" landscape="false" oid="!ed/fb52/53D8/778/5e3d88056f64">
+							<presentationElements>
+								<FlowTE presentable="!ed/fb57/53D8/778/5e3d88051383"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="all_shock_absorber_false"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+		<Operator kind="node" name="Computing_Model_PATHS21_MTC_OBS">
+			<inputs>
+				<Variable name="MTC_CC_93_A">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb5b/53D8/778/5e3d88057373" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC(all_gears_extended)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_94_T">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb5c/53D8/778/5e3d88057054" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#7 -&gt; all_gears_extended)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_CC_95_F">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb5d/53D8/778/5e3d8805388" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>CC($and#7 -&gt; all_gears_extended)</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+				<Variable name="MTC_INSTRU">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fd32/53D8/778/5e3d88052721" hidden="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>Instrumented</comment>
+						</ed:Variable>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<locals>
+				<Variable probe="true" name="MTC_ALL1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="MTC::Result"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/fb5e/53D8/778/5e3d88054096"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- MTC_ALL1 = (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_93_A, M... -->
+				<Equation>
+					<lefts>
+						<VariableRef name="MTC_ALL1"/>
+					</lefts>
+					<right>
+						<!-- (activate MTC::LATCHALL03 every MTC_INSTRU default (0))(MTC_CC_93_A, MTC_CC_94_T,... -->
+						<CallExpression>
+							<operator>
+								<ActivateNoInitOp>
+									<operator>
+										<OpCall>
+											<operator>
+												<OperatorRef name="MTC::LATCHALL03"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<every>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="MTC_INSTRU"/>
+											</path>
+										</IdExpression>
+									</every>
+									<default>
+										<ListExpression>
+											<items>
+												<ConstValue value="0"/>
+											</items>
+										</ListExpression>
+									</default>
+								</ActivateNoInitOp>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_93_A"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_94_T"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MTC_CC_95_F"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/fb5f/53D8/778/5e3d880528de"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/fb59/53D8/778/5e3d880516ad" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<comment>OBS(all_gears_extended)</comment>
+					<diagrams>
+						<TextDiagram name="diagram_Computing_Model_PATHS21_MTC_OBS" landscape="false" oid="!ed/fb5a/53D8/778/5e3d88056866">
+							<presentationElements>
+								<FlowTE presentable="!ed/fb5f/53D8/778/5e3d880528de"/>
+							</presentationElements>
+						</TextDiagram>
+					</diagrams>
+				</ed:Operator>
+				<kcg:Pragma>
+					expand
+				</kcg:Pragma>
+				<mtc:Operator noInstance="true" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/mtc/1">
+					<Observer observedOperator="all_gears_extended"/>
+				</mtc:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+	<pragmas>
+		<ed:Package oid="!ed/f72d/53D8/778/5e3d8805165a"/>
+	</pragmas>
+</Package>
